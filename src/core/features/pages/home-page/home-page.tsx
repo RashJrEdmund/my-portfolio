@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-24 gap-8">
       <h1 className="mx-auto text-app-text-500">
-        Hello Rash
+        Rash Edmund
       </h1>
 
       <Image
@@ -14,12 +14,12 @@ export default function HomePage() {
         height={400}
       />
 
-      <Image
+      {/* <Image
         src="/rash-1.jpeg"
         alt="rash edmund"
         width={400}
         height={400}
-      />
+      /> */}
     </main>
   );
 }

@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const appDescription =  "Lahfen Orashus' Portfolio site, built with, TypeScript, NextJs (App Router & src directory), NestJs, MongoDb, and Jest testing library. A full stack application";
+const appDescription =  "Lahfen Orashus' PWA (with i18n setup) Portfolio site, built with, TypeScript, NextJs (App Router & src directory), NestJs, MongoDb, and Jest testing library. A full stack application";
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Orashus' Portfolio site",
   },
   description: appDescription,
-  keywords: ["rash", "orashus", "portfolio", "portofolio site", "rash portfolio", "orashus portfolio", "SEO", "rash pwa", "orashus pwa"],
+  keywords: ["rash", "orashus", "portfolio", "portfolio site", "rash portfolio", "orashus portfolio", "SEO", "rash pwa", "orashus pwa"],
   manifest: "/manifest.json",
   authors: [
     {
