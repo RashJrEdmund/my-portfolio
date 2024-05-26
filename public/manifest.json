@@ -1,0 +1,53 @@
+{
+    "name": "Orashus' Portfolio site",
+    "short_name": "Rash's Portfolio",
+    "description": "Lahfen Orashus' Portfolio site, built with, TypeScript, NextJs (App Router & src directory), NestJs, MongoDb, and Jest testing library. A full stack application",
+    "theme_color": "#050507",
+    "background_color": "#050507",
+    "start_url": "/",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./manifest-assets/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "./manifest-assets/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "./manifest-assets/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "./manifest-assets/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./manifest-assets/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Home page",
+            "short_name": "home",
+            "description": "Landing page: were the main content is found",
+            "url": "/",
+            "icons": [
+                {
+                    "src": "./manifest-assets/shortcut-home.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
