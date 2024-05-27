@@ -20,6 +20,8 @@
     "paths": {
       "@/components/*": ["./src/core/components/*"],
       "@/features/*": ["./src/core/features/*"],
+      "@/config/*": ["./src/core/config/*"],
+      "@/lib/*": ["./src/core/lib/*"],
       "@/core/*": ["./src/core/*"],
       "@/*": ["./src/*"]
     }

@@ -1,0 +1,12 @@
+{
+  "en": {
+    "banner": {
+      "hello": "Hi, My name is Orashus"
+    }
+  },
+  "fr": {
+    "banner": {
+      "hello": "Salut, Je m'appelle Orashus"
+    }
+  }
+}

@@ -98,6 +98,7 @@ const config: Config = {
   moduleNameMapper: {
     "^@/components/(.*)$": "./src/core/components/$1",
     "^@/features/(.*)$": "./src/core/features/$1",
+    "^@/config/(.*)$": "./src/core/config/$1",
     "^@/core/(.*)$": "./src/core/$1",
     "^@/(.*)$": "./src/$1",
   },
