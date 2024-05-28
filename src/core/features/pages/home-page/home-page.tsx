@@ -1,5 +1,5 @@
 import { type AcceptedLocales } from "@/i18n/i18n-constants";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
 interface Props {
@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default async function HomePage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   const t = await getTranslations({ locale, namespace: "home-page.banner" } as unknown as undefined);
 
   const text = t("welcome", { name: "Rash" });

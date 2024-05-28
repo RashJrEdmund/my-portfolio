@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { getValidLocale } from "@/lib/utils";
 import { ACCEPTED_LOCALES, type AcceptedLocales } from "@/i18n/i18n-constants";
 // import { I18nProviderClient } from "@/i18n/client";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { NavBar } from "@/components/molecules";
 
@@ -78,7 +78,7 @@ export default async function RootLayout({
    * provides a temporary API that can be used to distribute the locale that is received via params
    * in layouts and pages for usage in all Server Components that are rendered as part of the request.
   */
-  // unstable_setRequestLocale(lang);
+  unstable_setRequestLocale(lang);
 
   // console.log({ messages });
 
