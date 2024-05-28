@@ -45,6 +45,10 @@ yarn test:watch # in watch mode
 - The About section and,
 - The Testimonials section
 
+### Figma Design
+
+- [preview here](https://www.figma.com/design/iPBnVmzvrE5wvDmqZbzoKz/My-portfolio-design?node-id=0-1&t=ls0pj64jA7hPxiVp-0)
+
 ## Live vercel deployment
 
-- coming soon...
+- [see deployment](https://rash-edmund.vercel.app)

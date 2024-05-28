@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { getValidLocale } from "@/lib/utils";
 import { ACCEPTED_LOCALES, type AcceptedLocales } from "@/i18n/i18n-constants";
-import { I18nProviderClient } from "@/i18n/client";
+// import { I18nProviderClient } from "@/i18n/client";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { NavBar } from "@/components/molecules";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,12 +66,13 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: AcceptedLocales };
 }>) {
   const lang = getValidLocale(locale);
+  const messages = await getMessages({ locale: lang });
 
   /**
    * provides a temporary API that can be used to distribute the locale that is received via params
@@ -76,12 +80,18 @@ export default async function RootLayout({
   */
   // unstable_setRequestLocale(lang);
 
+  // console.log({ messages });
+
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        {/* <I18nProviderClient locale={lang}> */}
-        {children}
-        {/* </I18nProviderClient> */}
+        <NextIntlClientProvider messages={messages}>
+          <NavBar locale={lang} />
+
+          <div className="w-full pt-12">
+            {children}
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

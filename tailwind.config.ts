@@ -1,18 +1,56 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
     "./src/core/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
+    },
+    extend: {
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
         app: {
           blue: {
             500: "var(--app-blue-500)",
@@ -29,10 +67,59 @@ const config: Config = {
             500: "var(--app-dark-500)",
             600: "var(--app-dark-600)",
           },
-        }
-      }
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      spacing: {
+        17: "4.5rem",
+        21: "5.5rem", // since p-20 is 5rem
+        "app-max-w": "var(--app-max-w)",
+        "app-dynamic-max-w": "var(--app-dynamic-max-w)",
+
+        "app-section-min-h": "var(--app-section-min-h)",
+      },
     },
   },
-  plugins: [],
-};
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(({ addUtilities }) => {
+      // for adding custom utilities. // https://tailwindcss.com/docs/plugins
+
+      const newUtilities = {
+        ".grid-auto-fill-350": {
+          "grid-template-columns": "repeat(auto-fill, minmax(350px, 1fr))",
+        },
+        ".grid-auto-fill-370": {
+          "grid-template-columns": "repeat(auto-fill, minmax(370px, 1fr))",
+        },
+        ".grid-auto-fill-380": {
+          "grid-template-columns": "repeat(auto-fill, minmax(380px, 1fr))",
+        },
+        ".grid-auto-fill-400": {
+          "grid-template-columns": "repeat(auto-fill, minmax(400px, 1fr))",
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
+} satisfies Config;
+
 export default config;

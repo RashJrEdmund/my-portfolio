@@ -1,4 +1,7 @@
 // import * as nextPWA from 'next-pwa';
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 import withPWAInit from "@ducanh2912/next-pwa";
 
@@ -38,4 +41,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
