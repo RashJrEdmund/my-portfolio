@@ -1,10 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ACCEPTED_LOCALES, type AcceptedLocales } from "@/config/i18n-locales";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { getValidLocale } from "@/lib/utils";
+import { ACCEPTED_LOCALES, type AcceptedLocales } from "@/i18n/i18n-constants";
+import { I18nProviderClient } from "@/i18n/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,7 +68,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: AcceptedLocales };
 }>) {
-  const lang = getValidLocale(locale); // the default
+  const lang = getValidLocale(locale);
 
   /**
    * provides a temporary API that can be used to distribute the locale that is received via params
@@ -77,16 +76,12 @@ export default async function RootLayout({
   */
   // unstable_setRequestLocale(lang);
 
-  const message = await getMessages();
-
-  console.log({ message });
-
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={message}>
-          {children}
-        </NextIntlClientProvider>
+        {/* <I18nProviderClient locale={lang}> */}
+        {children}
+        {/* </I18nProviderClient> */}
       </body>
     </html>
   );

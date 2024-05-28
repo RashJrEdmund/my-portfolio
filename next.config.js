@@ -1,9 +1,6 @@
 // import * as nextPWA from 'next-pwa';
 
 import withPWAInit from "@ducanh2912/next-pwa";
-import createNextIntlPlugin from "next-intl/plugin";
-
-const withNextInt = createNextIntlPlugin();
 
 const withPWA = withPWAInit({ // see package https://www.npmjs.com/package/next-pwa
   dest: "public",
@@ -41,4 +38,4 @@ const nextConfig = {
   }
 };
 
-export default withNextInt(nextConfig);
+export default nextConfig;
