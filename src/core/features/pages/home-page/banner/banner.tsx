@@ -41,7 +41,7 @@ function Banner() {
           <BannerCTA />
         </div>
 
-        <div className="w-full min-w-[250px] flex items-center justify-center md:justify-end border">
+        <div className="w-full min-w-[250px] flex items-center justify-center md:justify-end 2xl:justify-center border md:border-none">
           <Image
             src="/logo.png"
             alt="rash dev logo"

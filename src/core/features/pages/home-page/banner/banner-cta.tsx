@@ -7,8 +7,8 @@ import { toast } from "sonner";
 
 function BannerCTA() {
   const handleClick = () => {
-    toast("If Link to email doesn't automatically open", {
-      description: "click here to copy email",
+    toast("If your default emailing tool doesn't open automatically", {
+      description: "click here to copy and manually send me a mail",
       action: {
         label: "Copy email",
         onClick: () => {

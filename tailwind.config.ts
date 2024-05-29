@@ -57,6 +57,7 @@ const config = {
           },
           shimmer: {
             200: "var(--app-shimmer-200)",
+            300: "var(--app-shimmer-300)",
           },
           text: {
             200: "var(--app-text-200)",
