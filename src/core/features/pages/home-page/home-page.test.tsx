@@ -3,11 +3,24 @@ import { render } from "@testing-library/react";
 import HomePage from "./home-page";
 
 describe("Landing | page Page", () => {
-  it("Should have hello rash message", () => {
-    const { getByText } = render(<HomePage params={{ locale: "en"}} />);
+  it("Should have \"Hello, I'm Orashus, Rash for short\" message", () => {
+    const { getByRole } = render(<HomePage />);
 
-    const helloText = getByText("Hello Rash");
+    const header = getByRole("heading", { level: 1 });
 
-    expect(helloText).toBeInTheDocument();
+    expect(header).toBeInTheDocument();
+
+    expect(header).toHaveTextContent("Hello, I'm Orashus. Rash for short");
+  });
+
+  it("Should have an Image component", () => {
+    const { getByRole } = render(<HomePage />);
+
+    const img = getByRole("img");
+
+    expect(img).toBeInTheDocument();
+
+    expect(img).toHaveAttribute("alt", "rash edmund");
   });
 });
+

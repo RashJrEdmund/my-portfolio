@@ -1,26 +1,10 @@
-import { type AcceptedLocales } from "@/i18n/i18n-constants";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
-interface Props {
-  params: {
-    locale: AcceptedLocales
-  }
-}
-
-export default async function HomePage({ params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
-
-  const t = await getTranslations({ locale, namespace: "home-page.banner" } as unknown as undefined);
-
-  const text = t("welcome", { name: "Rash" });
-
-  // console.log({ t: text });
-
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-24 gap-8">
+    <main className="flex min-h-[90vh] flex-col items-center justify-start p-24 gap-8">
       <h1 className="mx-auto text-app-text-500">
-        {text}
+        Hello, I&apos;m Orashus. Rash for short.
       </h1>
 
       <Image

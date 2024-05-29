@@ -1,15 +1,18 @@
 import Link from "next/link";
 import SideList from "./side-list";
-import { type AcceptedLocales } from "@/i18n/i18n-constants";
 import Image from "next/image";
 
-export default async function NavBar({ locale }: { locale: AcceptedLocales }) {
+export default async function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-600">
       <div className="w-full max-w-app-dynamic-max-w mx-auto py-2 flex items-center justify-between">
         <h1 className="font-semibold sm:text-[1.5rem] w-fit">
-          <Link href="/" className="w-fit hover:text-app-blue-500 duration-300">
+          <Link
+            title="Rash for short"
+            href="/"
+            className="w-fit hover:text-app-blue-500 duration-300"
+          >
             Orashus
 
             <Image
@@ -23,7 +26,7 @@ export default async function NavBar({ locale }: { locale: AcceptedLocales }) {
         </h1>
 
         <div className="w-fit flex items-center justify-center gap-4">
-          <SideList locale={locale} />
+          <SideList />
 
           <Link
             href="#contact"

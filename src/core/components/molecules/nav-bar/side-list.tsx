@@ -1,82 +1,69 @@
 "use client";
 
 import Link from "next/link";
-import { type AcceptedLocales } from "@/i18n/i18n-constants";
-import { useTranslations } from "next-intl";
-import { useCallback, useMemo } from "react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger
 } from "@/components/ui/hover-card";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
-const PARENT_SECTIONS = ["portfolio", "blog"] as const;
-const SECTIONS = ["home", "services", "projects", "about", "search", "articles", "similar"] as const;
-
-export default function SideList({ locale }: { locale: AcceptedLocales }) {
-  const t = useTranslations("nav-bar.side-list" as unknown as undefined);
-
-  const translate = useCallback((parentSection: typeof PARENT_SECTIONS[number], section?: typeof SECTIONS[number]) => {
-    const _section = section ? `${parentSection}.${section}` : parentSection;
-    return t.raw(_section as never);
-  }, [t]);
-
-  // console.log({ t: translate("blog") });
-
-  const SIDE_LIST = useMemo(() => {
-    return [
+const SIDE_LIST = [
+  {
+    label: "Portfolio",
+    href: "/",
+    subList: [
       {
-        label: "Portfolio",
-        href: "/",
-        subList: [
-          {
-            subLabel: translate("portfolio", "home"),
-            subHref: "#home",
-          },
-          {
-            subLabel: translate("portfolio", "services"),
-            subHref: "#services",
-          },
-          {
-            subLabel: translate("portfolio", "projects"),
-            subHref: "#projects",
-          },
-          {
-            subLabel: translate("portfolio", "about"),
-            subHref: "#about",
-          }
-        ]
+        subLabel: "Home",
+        subHref: "#home",
       },
       {
-        label: "Blog",
-        href: `${locale}/blog`,
-        subList: [
-          {
-            subLabel: translate("blog", "search"),
-            subHref: "#search",
-          },
-          {
-            subLabel: translate("blog", "articles"),
-            subHref: "#articles",
-          },
-          {
-            subLabel: translate("blog", "similar"),
-            subHref: "#similar",
-          },
-        ]
+        subLabel: "Services",
+        subHref: "#services",
+      },
+      {
+        subLabel: "Projects",
+        subHref: "#projects",
+      },
+      {
+        subLabel: "About",
+        subHref: "#about",
       }
-    ] as const;
-  }, [locale, translate]);
+    ]
+  },
+  {
+    label: "Blog",
+    href: "/blog",
+    subList: [
+      {
+        subLabel: "Search",
+        subHref: "#search",
+      },
+      {
+        subLabel: "Articles",
+        subHref: "#articles",
+      },
+      {
+        subLabel: "Similar",
+        subHref: "#similar",
+      },
+    ]
+  }
+];
+
+export default function SideList() {
+  const pathname = usePathname();
 
   return (
     <ul className="flex items-center justify-center gap-4">
       {
         SIDE_LIST.map(({ label, href, subList }) => (
           <HoverCard key={label}>
-            <HoverCardTrigger className="group relative w-fit">
+            <HoverCardTrigger className="group relative w-fit" asChild>
               <Link
                 href={href}
-                className="inline-block font-semibold hover:text-app-blue-500 duration-300"
+                className={cn("inline-block font-semibold hover:text-app-blue-500 duration-300", pathname === href ? "text-app-blue-500" : "")}
               >
                 {label}
               </Link>
@@ -88,7 +75,7 @@ export default function SideList({ locale }: { locale: AcceptedLocales }) {
                   subList?.map(({ subLabel, subHref }) => (
                     <li key={subLabel} className="w-fit">
                       <Link
-                        href={subHref}
+                        href={href + subHref}
                         className="inline-block hover:text-app-blue-500 text-nowrap"
                       >
                         {subLabel}
