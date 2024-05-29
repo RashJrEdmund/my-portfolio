@@ -1,39 +1,26 @@
 import Link from "next/link";
 import SideList from "./side-list";
 import Image from "next/image";
+import { Text } from "@/components/ui/text";
+import { HeaderLogo } from "@/components/ui/text-logo";
 
 export default async function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-600">
       <div className="flex-1 w-full max-w-app-dynamic-max-w mx-auto py-[0.8rem] flex items-center justify-between">
-        <h1 className="font-semibold sm:text-[1.5rem] w-fit">
-          <Link
-            title="Rash for short"
-            href="/"
-            className="w-fit hover:text-app-blue-500 duration-300"
-          >
-            Orashus
-
-            <Image
-              src="/logo.png"
-              alt="rash edmund"
-              width={40}
-              height={40}
-              className="rounded-full hidden sm:inline"
-            />
-          </Link>
-        </h1>
+        <HeaderLogo />
 
         <div className="w-fit flex items-center justify-center gap-4">
           <SideList />
 
-          <Link
+          <Text
+            as={Link as unknown as keyof JSX.IntrinsicElements}
             href="#contact"
-            className="w-fit px-6 py-2 outline outline-1 outline-app-blue-500 font-semibold duration-300 hover:bg-app-blue-500"
+            className="px-4 py-1 sm:px-6 sm:py-2"
           >
             Contact
-          </Link>
+          </Text>
         </div>
       </div>
     </nav>

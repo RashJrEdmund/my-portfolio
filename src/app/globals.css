@@ -86,7 +86,7 @@ html {
   /*_____ TAILWIND EXTENSIONS _____*/
   /* COLORS */
   --app-blue-500: #0f5ef5;
-  
+
   --app-dark-200: #313131;
   --app-dark-500: #101017;
   --app-dark-600: #050507;
@@ -100,12 +100,18 @@ html {
 
   --app-max-w: 1900px;
   --app-dynamic-max-w: min(var(--app-max-w), 95vw);
-  --app-section-min-h: min(60vh, 950px);
+  --app-section-min-h: min(65vh, 950px);
 }
 
 @media only screen and (max-width: 1000px) {
   :root {
     --app-section-min-h: 80vh;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  :root {
+    /* --app-section-min-h: 60vh; */
   }
 }
 
@@ -115,22 +121,30 @@ html {
   }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  min-height: 100vh;
   color: var(--app-text-500);
   background: var(--app-dark-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: none;
 }
 
 a {

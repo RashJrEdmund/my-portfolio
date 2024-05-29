@@ -60,21 +60,22 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <Toaster
-        closeButton
-        theme="system"
-        pauseWhenPageIsHidden
-        toastOptions={{
-          classNames: {
-            closeButton: "bg-white",
-          }
-        }}
-      />
-
       <body className={inter.className}>
+        <Toaster
+          closeButton
+          theme="system"
+          pauseWhenPageIsHidden
+          toastOptions={{
+            classNames: {
+              // closeButton: "bg-white",
+            }
+          }}
+          className="h-0"
+        />
+
         <NavBar />
 
-        <div className="w-full min-h-[90vh] pt-17">
+        <div className="w-full min-h-[85vh] pt-8 md:pt-17">
           {children}
         </div>
 

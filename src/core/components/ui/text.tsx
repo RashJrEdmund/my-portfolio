@@ -13,7 +13,7 @@ function Text({ children, as: Element = "button", className = "", hideAnimation 
   return (
     <Element
       {...restProps}
-      className={cn("relative z-[3] group inline-block text-nowrap outline outline-1 outline-app-blue-500 bg-transparent text-app-text-500 px-6 py-3 cursor-pointer", className)}
+      className={cn("relative z-[3] group inline-block text-nowrap outline outline-1 outline-app-blue-500 bg-transparent text-app-text-500 px-4 py-1 sm:px-6 sm:py-3 cursor-pointer", className)}
     >
       {!hideAnimation ? (
         <span
