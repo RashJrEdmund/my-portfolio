@@ -8,7 +8,7 @@ interface CustomProperties {
 
 type Properties = IconProperties & CustomProperties;
 
-export function Icon({ icon, ...properties }: Properties) {
+export function Icon({ icon, size = 20, ...properties }: Properties) {
   const Component = icons[icon];
-  return <Component {...properties} />;
+  return <Component size={size} {...properties} />;
 }

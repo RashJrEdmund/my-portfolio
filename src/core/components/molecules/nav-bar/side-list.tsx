@@ -69,7 +69,7 @@ export default function SideList() {
               </Link>
             </HoverCardTrigger>
 
-            <HoverCardContent asChild className="bg-app-dark-200 text-app-text-500 w-fit">
+            <HoverCardContent asChild className="bg-app-dark-200 text-app-text-500 w-fit mt-4 rounded-none">
               <ul className="flex items-center justify-center gap-4">
                 {
                   subList?.map(({ subLabel, subHref }) => (

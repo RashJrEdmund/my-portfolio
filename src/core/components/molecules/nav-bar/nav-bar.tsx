@@ -6,7 +6,7 @@ export default async function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-600">
-      <div className="w-full max-w-app-dynamic-max-w mx-auto py-2 flex items-center justify-between">
+      <div className="flex-1 w-full max-w-app-dynamic-max-w mx-auto py-[0.8rem] flex items-center justify-between">
         <h1 className="font-semibold sm:text-[1.5rem] w-fit">
           <Link
             title="Rash for short"
