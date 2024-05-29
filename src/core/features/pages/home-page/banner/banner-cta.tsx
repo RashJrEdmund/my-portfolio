@@ -29,6 +29,7 @@ function BannerCTA() {
         href="mailto:orashusedmund@gmail.com?subject=Job%offer%for%a%dev%role&body=Hi%20Rash"
         animationStyles="left-[unset] right-0"
         onClick={handleClick}
+        data-testid="email-link"
       >
         Email Me
       </Text>
@@ -38,6 +39,7 @@ function BannerCTA() {
         href="/rash.resume.pdf"
         target="_blank"
         className="outline-0"
+        data-testid="download-resume"
       >
         <Icon icon="arrowDown" size={20} className="inline" /> Download Resume
       </Text>

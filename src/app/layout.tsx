@@ -75,7 +75,7 @@ export default async function RootLayout({
 
         <NavBar />
 
-        <div className="w-full min-h-[85vh] pt-8 md:pt-17">
+        <div className="w-full min-h-[85vh] pt-17">
           {children}
         </div>
 

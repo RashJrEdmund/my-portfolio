@@ -1,6 +1,5 @@
 import Link from "next/link";
 import SideList from "./side-list";
-import Image from "next/image";
 import { Text } from "@/components/ui/text";
 import { HeaderLogo } from "@/components/ui/text-logo";
 
@@ -8,7 +7,7 @@ export default async function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-600">
-      <div className="flex-1 w-full max-w-app-dynamic-max-w mx-auto py-[0.8rem] flex items-center justify-between">
+      <div className="flex-1 w-full max-w-app-dynamic-max-w mx-auto py-4 flex items-center justify-between">
         <HeaderLogo />
 
         <div className="w-fit flex items-center justify-center gap-4">

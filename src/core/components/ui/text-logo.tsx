@@ -9,7 +9,7 @@ function HeaderLogo({ hTagLevel: Htag = "h1" }: { hTagLevel?: keyof JSX.Intrinsi
         href="/"
         className="w-fit hover:text-app-blue-500 duration-300"
       >
-        Orashus <span className="text-app-blue-500 text-[2rem] sm:text-[4rem] border border-gray-400 leading-[0]">.</span>
+        Orashus <span className="text-app-blue-500 text-[2rem] sm:text-[4rem] leading-[0]">.</span>
 
         <Image
           src="/logo.png"
