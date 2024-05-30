@@ -26,7 +26,7 @@ function WorkExperience() {
           Work Experience
         </h3>
 
-        <div className="w-full flex flex-wrap gap-4 md:gap-8 items-start justify-center">
+        <div className="w-full flex flex-wrap gap-6 md:gap-8 items-start justify-center">
           <Suspense fallback={<ExperienceShimmer />}>
             <ExperienceList />
           </Suspense>

@@ -99,7 +99,7 @@ html {
 
   /* TAILWIND EXTENSION OF SPACING */
 
-  --app-max-w: 1900px;
+  --app-max-w: 1500px;
   --app-dynamic-max-w: min(var(--app-max-w), 95vw);
   --app-section-min-h: min(65vh, 950px);
 }

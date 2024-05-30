@@ -13,11 +13,14 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
 
   return (
     <motion.div
-      className={cn("absolute z-[4] w-fit h-fit rounded-2xl bg-transparent flex items-center justify-center text-center", className)}
+      className={cn("z-[4] w-fit h-fit rounded-2xl mx-auto bg-transparent flex items-center justify-center text-center", className)}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 1.1 }}
-      drag="y"
-      dragConstraints={{ top: -window.innerHeight, bottom: window.innerHeight }}
+      drag
+      dragConstraints={{
+        top: -(window.innerHeight * 1.5), bottom: window.innerHeight,
+        left: -window.innerWidth * 0.4, right: window.innerWidth * 0.4
+      }}
       onFocus={() => {
         setSpiSrc("/space-craft.svg");
       }}
