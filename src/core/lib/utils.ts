@@ -5,7 +5,7 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-function waitAndResolve<T>(data: T, time: number = 4000) {
+function waitAndResolve<T>(data: T, time: number = 2000) {
   return new Promise<T>((resolve) => {
     setTimeout(() => {
       resolve(data);

@@ -1,19 +1,18 @@
 import { render } from "@testing-library/react";
 
-import { Services } from "./services";
+import { SkillComponent } from "./skills";
 
 describe("Landing page | Service section", () => {
   const {
     getByRole,
-  } = render(<Services />);
+  } = render(<SkillComponent skill={{ id: "1", label: "test-label", description: "test description" }} />);
 
-  it("Should have \"1.7+ years coding experience.\" message", () => {
-
-    const header = getByRole("heading", { level: 3 });
+  it("Should render the <SkillComponent skill={{ id: \"1\", label: \"test-label\", description: \"test description\" }} />  message", () => {
+    const header = getByRole("heading", { level: 4 });
 
     expect(header).toBeInTheDocument();
 
-    expect(header).toHaveTextContent("1.7+ years coding experience.");
+    expect(header).toHaveTextContent("test-label");
   });
 });
 

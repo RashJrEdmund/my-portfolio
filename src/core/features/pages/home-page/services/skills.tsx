@@ -6,7 +6,7 @@ function SillShimmer() {
   return (
     <>
       {Array.from({ length: 4 }, (_, i) => i).map((i) => (
-        <Skeleton key={i} className="w-[95%] h-[200px] mx-auto flex flex-col gap-4 p-4 bg-app-dark-200 rounded-none">
+        <Skeleton key={i} className="w-[95%] xl:max-w-[350px] h-[200px] mx-auto flex flex-col gap-4 p-4 bg-app-dark-200 rounded-none">
           <Skeleton className="w-full h-[30px] bg-app-shimmer-300 rounded-none" />
 
           <Skeleton className="w-full h-[150px] bg-app-shimmer-300 rounded-none" />
@@ -18,7 +18,7 @@ function SillShimmer() {
 
 function SkillComponent({ skill: { id, label, description } }: { skill: Skill }) {
   return (
-    <div className="w-[95%] h-[200px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
+    <div className="w-[100%] sm:w-[95%] xl:max-w-[350px] h-[200px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
       <h4 className="font-semibold text-[1.2rem]">
         {label}
       </h4>
@@ -52,5 +52,6 @@ async function Skills() {
 
 export {
   SillShimmer,
+  SkillComponent, // exporting to be tested
   Skills
 };

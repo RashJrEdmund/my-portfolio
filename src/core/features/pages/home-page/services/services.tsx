@@ -28,7 +28,7 @@ function Services() {
             Skill Set
           </h3>
 
-          <div className="w-full grid grid-auto-fill-350 gap-y-6">
+          <div className="w-full flex flex-col items-center justify-center sm:grid grid-auto-fill-350 2xl:flex 2xl:flex-row gap-4 gap-y-6">
             <Suspense fallback={<SillShimmer />}>
               <Skills />
             </Suspense>
