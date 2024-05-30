@@ -1,5 +1,6 @@
 import { Banner } from "./banner/banner";
 import { Services } from "./services/services";
+import { WorkExperience } from "./work-experience/work-experience";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,8 @@ export default function HomePage() {
       <Banner />
 
       <Services />
+
+      <WorkExperience />
     </main>
   );
 }

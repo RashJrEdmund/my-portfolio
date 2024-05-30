@@ -1,20 +1,16 @@
 import { HeaderLogo } from "@/components/ui/text-logo";
 import { getSocials } from "./api/socials.queries";
 import type { SocialHandle } from "./api/types";
-import { FollowLinkSvg, SmallLineSvg } from "@/components/ui/svg";
+import { SmallLineSvg } from "@/components/ui/svg";
 import Link from "next/link";
 
 function HandleCard({ handle: { id, name, username, href } }: { handle: SocialHandle }) {
   return (
     <li className="flex flex-col">
       <p className="font-semibold text-[1rem]">{name}</p>
-      <p className="font-light text-nowrap">
+      <Link href={href} target="_blank" className="font-light text-nowrap text-app-blue-500 md:text-app-text-200 md:font-normal md:hover:text-app-blue-500" title={"go to " + name + " - " + username}>
         @{username}
-
-        <Link href={href} target="_blank" className="ml-2 sm:ml-4 w-fit" title={"go to " + name + " - " + username}>
-          <FollowLinkSvg className="size-6" />
-        </Link>
-      </p>
+      </Link>
     </li>
   );
 }
@@ -27,11 +23,11 @@ export default async function Footer() {
       <div className="w-full max-w-app-dynamic-max-w mx-auto flex flex-col md:flex-row items-start justify-between gap-8 py-8">
         <HeaderLogo hTagLevel="h2" imgSx="inline" />
 
-        <div className="w-fit sm:w-full flex items-start justify-center gap-[5px] sm:gap-8 md:gap-16">
+        <div className="w-fit sm:w-full flex items-start justify-center gap-[5px] ssm:gap-4 sm:gap-8 md:gap-16">
           <div className="w-fit">
-            <h3 className="font-bold sm:text-[1.2rem] mb-4">
+            <h3 className="font-bold sm:text-[1.2rem] mb-4 text-nowrap">
               <SmallLineSvg className="mr-4" />
-              Link tree
+              Link Tree
             </h3>
 
             <ul className="flex flex-col gap-y-2 sm:gap-y-4">

@@ -29,7 +29,16 @@ function FollowLinkSvg({ className, ...restProps }: Props) {
   );
 }
 
+const ServiceSVGObj = {
+  serviceSvg1: "/icons/service-svg-1.svg",
+  serviceSvg2: "/icons/service-svg-2.svg",
+  serviceSvg3: "/icons/service-svg-3.svg",
+};
+
 export {
   SmallLineSvg,
   FollowLinkSvg,
+
+  // OBJECTS, should be used with images
+  ServiceSVGObj,
 };
