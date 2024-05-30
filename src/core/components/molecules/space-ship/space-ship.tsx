@@ -4,8 +4,11 @@ import { DynamicText } from "@/components/ui/dynamic-text";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?: string }) {
+  const [shipSrc, setSpiSrc] = useState<string>("/space-craft-idling.svg");
+
   if (typeof window === "undefined") return null;
 
   return (
@@ -15,18 +18,24 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
       whileTap={{ scale: 1.1 }}
       drag="y"
       dragConstraints={{ top: -window.innerHeight, bottom: window.innerHeight }}
+      onFocus={() => {
+        setSpiSrc("/space-craft.svg");
+      }}
+      onBlur={() => {
+        setSpiSrc("/space-craft-idling.svg");
+      }}
     >
       <DynamicText
         writerOptions={{
-          words: ["let's goOO! 😅", "sky's not even a limit", "if we work"],
-          loop: true,
+          words: ["let's goOO! 😅", "sky's not even a limit", "if we work", "so let's work"],
+          loop: 2,
           cursorStyle: "_"
         }}
         className="absolute top-[-10px] left-[50%] font-light text-[0.7rem] sm:text-[1rem] bg-white text-app-dark-600 rounded-sm p-[5px]"
       />
 
       <Image
-        src="space-craft.svg"
+        src={shipSrc}
         alt="space craft. sky's not even the limit"
         height={100}
         width={100}
