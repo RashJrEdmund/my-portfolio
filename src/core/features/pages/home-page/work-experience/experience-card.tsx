@@ -1,7 +1,9 @@
-import { Skeleton } from "@/components/ui/skeleton";
-import Link from "next/link";
-import { FollowLinkSvg } from "@/components/ui/svg";
 import type { Experience } from "../../api/interface";
+
+import { Skeleton } from "@/components/ui/skeleton";
+import { FollowLinkSvg } from "@/components/ui/svg";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Link from "next/link";
 import Image from "next/image";
 
 function ExperienceShimmer() {
@@ -9,8 +11,14 @@ function ExperienceShimmer() {
     <>
       {
         [1, 2, 3].map(val => (
-          <Skeleton key={val} className="w-full max-w-[400px] min-h-[350px] bg-app-dark-200">
-            <Skeleton />
+          <Skeleton key={val} className="w-full max-w-[400px] min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
+            <Skeleton className="w-full flex items-center justify-start gap-4 bg-transparent">
+              <Skeleton className="w-[50px] h-[50px] rounded-full bg-app-shimmer-300" />
+
+              <Skeleton className="w-[80%] h-[30px] bg-app-shimmer-300" />
+            </Skeleton>
+
+            <Skeleton className="w-full h-[250px] bg-app-shimmer-300" />
           </Skeleton>
         ))
       }
@@ -20,40 +28,42 @@ function ExperienceShimmer() {
 
 function ExperienceCard({ experience }: { experience: Experience }) {
   return (
-    <div
-      className="w-full max-w-[400px] min-h-[350px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4"
-    >
-      <div className="w-full flex items-center justify-start gap-4">
-        <Image
-          src={experience.orgLogo}
-          alt={experience.organization + " logo"}
-          width={40}
-          height={40}
-          className="rounded-full w-[50px] h-[50px]"
-        />
+    <CardContainer className="inter-var w-full h-fit p-0" containerClassName="w-full h-fit max-w-[400px] p-0">
+      <CardBody className="w-full h-fit min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
+        <CardItem
+          translateZ={50}
+          className="w-full flex items-center justify-start gap-4"
+        >
+          <Image
+            src={experience.orgLogo}
+            alt={experience.organization + " logo"}
+            width={50}
+            height={50}
+            className="rounded-full w-[50px] h-[50px] bg-cover bg-center bg-no-repeat"
+          />
 
-        <h1 className="font-semibold text-[1.5rem] text-nowrap">
-          {experience.organization}
-          <Link href="/" className="w-fit ml-4">
-            <FollowLinkSvg />
-          </Link>
-        </h1>
-      </div>
+          <h2 className="font-semibold text-[1.5rem] text-nowrap">
+            {experience.organization}
+            <Link href="/" className="w-fit ml-4">
+              <FollowLinkSvg />
+            </Link>
+          </h2>
+        </CardItem>
+        <CardItem as="p" translateZ={55} className="font-light">
+          {experience.orgDescription}
+        </CardItem>
 
-      <p className="font-light">
-        {experience.orgDescription}
-      </p>
-
-      <ul className="mt-4 pl-4 list-disc flex flex-col items-start justify-start gap-4">
-        {
-          experience.achievements?.map((arch) => (
-            <li key={arch}>
-              {arch}
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+        <CardItem as="ul" translateZ={50} className="mt-4 pl-4 list-disc flex flex-col items-start justify-start gap-4">
+          {
+            experience.achievements?.map((arch) => (
+              <li key={arch}>
+                {arch}
+              </li>
+            ))
+          }
+        </CardItem>
+      </CardBody>
+    </CardContainer>
   );
 }
 

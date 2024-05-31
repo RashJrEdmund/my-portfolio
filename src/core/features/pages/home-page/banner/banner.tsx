@@ -5,7 +5,7 @@ import Image from "next/image";
 function Banner() {
   return (
     <div id="home" className="w-full max-w-app-dynamic-max-w flex items-center justify-center bg-app-dark-500">
-      <div className="w-full min-h-[60vh] md:min-h-app-section-min-h flex flex-col-reverse gap-2 sm:gap-4 md:flex-row items-start justify-center pt-8">
+      <div className="w-full min-h-[60vh] md:min-h-app-section-min-h flex flex-col-reverse gap-2 sm:gap-4 md:flex-row items-center justify-center pt-8">
         <div className="w-full flex flex-col gap-4 md:gap-8 items-start justify-center">
           <h1 className="text-app-blue-500 font-semibold text-[1rem] md:text-[2rem]">
             Hello, I&apos;m Orashus {JSON.stringify("{ }").slice(1, -1)}, Rash for short.

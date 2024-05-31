@@ -6,7 +6,7 @@ interface Props extends ComponentProps<any> {
   animationStyles?: string;
   className?: string;
   onClick?: MouseEventHandler;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType; // or simply keyof JSX.IntrinsicElements;
 }
 
 function Text({ children, as: Element = "button", className = "", hideAnimation = false, animationStyles = "", ...restProps }: Props) {

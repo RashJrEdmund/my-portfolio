@@ -4,12 +4,32 @@ import { DynamicText } from "@/components/ui/dynamic-text";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?: string }) {
   const [shipSrc, setSpiSrc] = useState<string>("/space-craft-idling.svg");
 
-  if (typeof window === "undefined") return null;
+  const [dragConstraints, setDragConstraints] = useState({
+    top: 0, bottom: 0,
+    left: 0, right: 0,
+  });
+
+  const startEngine = () => {
+    setSpiSrc("/space-craft.svg");
+  };
+
+  const StopEngine = () => {
+    setSpiSrc("/space-craft-idling.svg");
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    setDragConstraints({
+      top: -(window.innerHeight * 1.5), bottom: window.innerHeight,
+      left: -window.innerWidth * 0.4, right: window.innerWidth * 0.4
+    });
+  }, []);
 
   return (
     <motion.div
@@ -17,16 +37,21 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 1.1 }}
       drag
-      dragConstraints={{
-        top: -(window.innerHeight * 1.5), bottom: window.innerHeight,
-        left: -window.innerWidth * 0.4, right: window.innerWidth * 0.4
+      dragConstraints={dragConstraints}
+      onFocus={startEngine}
+      onBlur={StopEngine}
+      onDirectionLock={(axis) => {
+        console.log({ axis });
       }}
-      onFocus={() => {
-        setSpiSrc("/space-craft.svg");
-      }}
-      onBlur={() => {
-        setSpiSrc("/space-craft-idling.svg");
-      }}
+      // onUpdate={(latest) => {
+      //   console.log({ latest });
+
+      //   if (+latest.y < 0 ) {
+      //     setRotation("180deg");
+      //   } else {
+      //     setRotation("0deg")
+      //   }
+      // }}
     >
       <DynamicText
         writerOptions={{
@@ -44,6 +69,7 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
         width={100}
         className={cn("w-[200px]", imgSx)}
         draggable={false}
+        title={"Click to start engine"}
       />
     </motion.div>
   );

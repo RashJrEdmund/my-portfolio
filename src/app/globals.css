@@ -101,7 +101,7 @@ html {
 
   --app-max-w: 1500px;
   --app-dynamic-max-w: min(var(--app-max-w), 95vw);
-  --app-section-min-h: min(65vh, 950px);
+  --app-section-min-h: min(90vh, 950px);
 }
 
 @media only screen and (max-width: 1000px) {
