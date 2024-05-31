@@ -42,7 +42,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             className="rounded-full w-[50px] h-[50px] bg-cover bg-center bg-no-repeat"
           />
 
-          <h2 className="font-semibold text-[1.5rem] text-nowrap">
+          <h2 className="font-semibold text-[1.2rem] md:text-[1.5rem] text-nowrap">
             {experience.organization}
             <Link href="/" className="w-fit ml-4">
               <FollowLinkSvg />

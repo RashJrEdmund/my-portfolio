@@ -4,7 +4,7 @@ import { WorkExperience } from "./work-experience/work-experience";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-start gap-4">
+    <main className="flex flex-col items-center justify-start gap-16 xl:gap-4">
       <Banner />
 
       <Services />
