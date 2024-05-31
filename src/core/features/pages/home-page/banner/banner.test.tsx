@@ -45,7 +45,7 @@ describe("Landing page | Banner section", () => {
     expect(emailLink).toBeInTheDocument();
   });
 
-  it("Should be display toast when \"Email Me\" button is clicked", () => {
+  it("Should display toast when \"Email Me\" button is clicked", () => {
     const { getByTestId } = render(<Banner />);
 
     const emailButtonLink = getByTestId("email-link");
