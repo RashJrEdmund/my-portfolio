@@ -14,12 +14,13 @@ export default function NotFound() {
 
       <p>Page Not Found</p>
 
-      <Link href="/" className="relative group inline-block text-nowrap outline outline-1 outline-app-blue-500 text-app-text-500 px-6 py-3">
-        <span
-          className="absolute top-0 left-0 z-[-1] h-full w-0 group-hover:w-full duration-300 bg-app-blue-500"
-        />
+      <Link
+        href="/"
+        className="relative group inline-block text-nowrap outline outline-1 outline-app-blue-500 text-app-text-500 px-6 py-3"
+      >
+        <span className="absolute top-0 left-0 z-[-1] h-full w-0 group-hover:w-full duration-300 bg-app-blue-500" />
         back to portfolio
       </Link>
     </main>
   );
-};
+}

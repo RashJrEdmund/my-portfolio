@@ -2,10 +2,10 @@ interface Skill {
   id: string;
   label: string;
   description: string;
-};
+}
 
 interface Experience {
-  id: string ;
+  id: string;
   organization: string;
   orgLink: string;
   orgLogo: string;
@@ -15,7 +15,4 @@ interface Experience {
   endDate: Date | string;
 }
 
-export type {
-  Skill,
-  Experience,
-};
+export type { Skill, Experience };

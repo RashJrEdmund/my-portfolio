@@ -8,7 +8,10 @@ function SillShimmer() {
   return (
     <>
       {Array.from({ length: 4 }, (_, i) => i).map((i) => (
-        <Skeleton key={i} className="w-[95%] xl:max-w-[350px] h-[260px] mx-auto flex flex-col gap-4 p-4 bg-app-dark-200 rounded-none">
+        <Skeleton
+          key={i}
+          className="w-[95%] xl:max-w-[350px] h-[260px] mx-auto flex flex-col gap-4 p-4 bg-app-dark-200 rounded-none"
+        >
           <Skeleton className="w-[50px] h-[50px] bg-app-shimmer-300 rounded-none" />
 
           <Skeleton className="w-full h-[30px] bg-app-shimmer-300 rounded-none" />
@@ -20,10 +23,19 @@ function SillShimmer() {
   );
 }
 
-function SkillComponent({ skill: { id, label, description }, i }: { skill: Skill; i: number }) {
+function SkillComponent({
+  skill: { id, label, description },
+  i,
+}: {
+  skill: Skill;
+  i: number;
+}) {
   const adder = i % 2 === 0 ? 1 : 2;
 
-  const src = ServiceSVGObj["serviceSvg" + (adder) as unknown as keyof (typeof ServiceSVGObj)];
+  const src =
+    ServiceSVGObj[
+      ("serviceSvg" + adder) as unknown as keyof typeof ServiceSVGObj
+    ];
 
   return (
     <div className="w-[100%] sm:w-[95%] xl:max-w-[350px] h-fit min-h-[260px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
@@ -34,15 +46,12 @@ function SkillComponent({ skill: { id, label, description }, i }: { skill: Skill
         height={50}
         className="w-[50px] h-[50px]"
         draggable={false}
+        data-test-src={src}
       />
 
-      <h4 className="font-semibold text-[1.2rem]">
-        {label}
-      </h4>
+      <h4 className="font-semibold text-[1.2rem]">{label}</h4>
 
-      <p className="font-normal leading-6">
-        {description}
-      </p>
+      <p className="font-normal leading-6">{description}</p>
     </div>
   );
 }
@@ -52,17 +61,13 @@ async function Skills() {
 
   return (
     <>
-      {
-        skillData.length ? (
-          skillData.map((skill, i) => (
-            <SkillComponent key={skill.id} skill={skill} i={i} />
-          ))
-        ) : (
-          <div>
-            Rash Has Not Added Any Skill Yet!
-          </div>
-        )
-      }
+      {skillData.length ? (
+        skillData.map((skill, i) => (
+          <SkillComponent key={skill.id} skill={skill} i={i} />
+        ))
+      ) : (
+        <div>Rash Has Not Added Any Skill Yet!</div>
+      )}
     </>
   );
 }
@@ -70,5 +75,5 @@ async function Skills() {
 export {
   SillShimmer,
   SkillComponent, // exporting to be tested
-  Skills
+  Skills,
 };

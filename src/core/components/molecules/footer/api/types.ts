@@ -3,8 +3,6 @@ interface SocialHandle {
   name: string;
   username: string;
   href: string;
-};
+}
 
-export type {
-  SocialHandle
-};
+export type { SocialHandle };

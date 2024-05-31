@@ -15,8 +15,10 @@ function HeaderLogo({ hTagLevel: Htag = "h1", imgSx = "" }: Props) {
         href="/"
         className="w-fit hover:text-app-blue-500 duration-300 text-nowrap"
       >
-        Orashus <span className="text-app-blue-500 text-[2rem] sm:text-[4rem] leading-[0]">.</span>
-
+        Orashus{" "}
+        <span className="text-app-blue-500 text-[2rem] sm:text-[4rem] leading-[0]">
+          .
+        </span>
         <Image
           src="/logo.png"
           alt="rash edmund"
@@ -27,8 +29,6 @@ function HeaderLogo({ hTagLevel: Htag = "h1", imgSx = "" }: Props) {
       </Link>
     </Htag>
   );
-};
+}
 
-export {
-  HeaderLogo
-};
+export { HeaderLogo };

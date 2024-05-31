@@ -9,7 +9,4 @@ const getExperiences = () => {
   return waitAndResolve(ExperienceData);
 };
 
-export {
-  getSkills,
-  getExperiences,
-};
+export { getSkills, getExperiences };

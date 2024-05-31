@@ -31,13 +31,11 @@ const SocialAccounts: SocialHandle[] = [
     name: "StackOverFlow",
     username: "orashus",
     href: "https://stackoverflow.com/users/21746512/orashus",
-  }
+  },
 ];
 
 const getSocials = () => {
   return waitAndResolve(SocialAccounts, 400);
 };
 
-export {
-  getSocials,
-};
+export { getSocials };

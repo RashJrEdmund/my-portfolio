@@ -5,23 +5,23 @@ import { Text } from "@/components/ui/text";
 import Link from "next/link";
 import { toast } from "sonner";
 
-function BannerCTA() {
-  const handleClick = () => {
-    toast("If your default emailing tool doesn't open automatically", {
-      description: "click here to copy and manually send me a mail",
-      action: {
-        label: "Copy email",
-        onClick: () => {
-          toast.promise(navigator.clipboard.writeText("orashusedmun@gmail.com"), {
-            loading: "copying to clipboard...",
-            success: "Email copied",
-            error: "Something went wrong, please try again"
-          });
-        }
-      }
-    });
-  };
+export const handleClick = () => {
+  toast("If your default emailing tool doesn't open automatically", {
+    description: "click here to copy and manually send me a mail",
+    action: {
+      label: "Copy email",
+      onClick: () => {
+        toast.promise(navigator.clipboard.writeText("orashusedmun@gmail.com"), {
+          loading: "copying to clipboard...",
+          success: "Email copied",
+          error: "Something went wrong, please try again",
+        });
+      },
+    },
+  });
+};
 
+function BannerCTA() {
   return (
     <div className="w-fit flex items-center justify-center flex-nowrap gap-4">
       <Text
@@ -45,8 +45,6 @@ function BannerCTA() {
       </Text>
     </div>
   );
-};
+}
 
-export {
-  BannerCTA,
-};
+export { BannerCTA };

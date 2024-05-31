@@ -9,26 +9,30 @@ import Image from "next/image";
 function ExperienceShimmer() {
   return (
     <>
-      {
-        [1, 2, 3].map(val => (
-          <Skeleton key={val} className="w-full max-w-[400px] min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
-            <Skeleton className="w-full flex items-center justify-start gap-4 bg-transparent">
-              <Skeleton className="w-[50px] h-[50px] rounded-full bg-app-shimmer-300" />
+      {[1, 2, 3].map((val) => (
+        <Skeleton
+          key={val}
+          className="w-full max-w-[400px] min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4"
+        >
+          <Skeleton className="w-full flex items-center justify-start gap-4 bg-transparent">
+            <Skeleton className="w-[50px] h-[50px] rounded-full bg-app-shimmer-300" />
 
-              <Skeleton className="w-[80%] h-[30px] bg-app-shimmer-300" />
-            </Skeleton>
-
-            <Skeleton className="w-full h-[250px] bg-app-shimmer-300" />
+            <Skeleton className="w-[80%] h-[30px] bg-app-shimmer-300" />
           </Skeleton>
-        ))
-      }
+
+          <Skeleton className="w-full h-[250px] bg-app-shimmer-300" />
+        </Skeleton>
+      ))}
     </>
   );
-};
+}
 
 function ExperienceCard({ experience }: { experience: Experience }) {
   return (
-    <CardContainer className="inter-var w-full h-fit p-0" containerClassName="w-full h-fit max-w-[400px] p-0">
+    <CardContainer
+      className="inter-var w-full h-fit p-0"
+      containerClassName="w-full h-fit max-w-[400px] p-0"
+    >
       <CardBody className="w-full h-fit min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
         <CardItem
           translateZ={50}
@@ -53,21 +57,16 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           {experience.orgDescription}
         </CardItem>
 
-        <CardItem as="ul" translateZ={50} className="mt-4 pl-4 list-disc flex flex-col items-start justify-start gap-4">
-          {
-            experience.achievements?.map((arch) => (
-              <li key={arch}>
-                {arch}
-              </li>
-            ))
-          }
+        <CardItem
+          as="ul"
+          translateZ={50}
+          className="mt-4 pl-4 list-disc flex flex-col items-start justify-start gap-4"
+        >
+          {experience.achievements?.map((arch) => <li key={arch}>{arch}</li>)}
         </CardItem>
       </CardBody>
     </CardContainer>
   );
 }
 
-export {
-  ExperienceShimmer,
-  ExperienceCard,
-};
+export { ExperienceShimmer, ExperienceCard };

@@ -21,15 +21,12 @@ interface Props extends ComponentProps<"span"> {
     onDelay?: writerFn;
     onDelete?: writerFn;
     onType?: (count: number) => void;
-  }
+  };
 }
 
 function DynamicText({ className, writerOptions, ...restProps }: Props) {
   return (
-    <span
-      {...restProps}
-      className={cn("text-nowrap", className || "")}
-    >
+    <span {...restProps} className={cn("text-nowrap", className || "")}>
       <Typewriter
         words={writerOptions.words || []}
         loop={writerOptions?.loop ?? 5}
@@ -40,7 +37,6 @@ function DynamicText({ className, writerOptions, ...restProps }: Props) {
         typeSpeed={writerOptions?.typeSpeed ?? 70}
         deleteSpeed={writerOptions?.deleteSpeed ?? 50}
         delaySpeed={writerOptions?.delaySpeed ?? 1000}
-
         onLoopDone={writerOptions?.onLoopDone}
         onDelay={writerOptions?.onDelay}
         onType={writerOptions?.onType}
@@ -48,8 +44,6 @@ function DynamicText({ className, writerOptions, ...restProps }: Props) {
       />
     </span>
   );
-};
+}
 
-export {
-  DynamicText
-};
+export { DynamicText };

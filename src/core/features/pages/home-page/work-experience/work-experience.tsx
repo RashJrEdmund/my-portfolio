@@ -7,11 +7,9 @@ async function ExperienceList() {
   const Experiences = await getExperiences();
   return (
     <>
-      {
-        Experiences.map((experience) => (
-          <ExperienceCard key={experience.id} experience={experience} />
-        ))
-      }
+      {Experiences.map((experience) => (
+        <ExperienceCard key={experience.id} experience={experience} />
+      ))}
     </>
   );
 }
@@ -34,8 +32,6 @@ function WorkExperience() {
       </div>
     </div>
   );
-};
+}
 
-export {
-  WorkExperience,
-};
+export { WorkExperience };

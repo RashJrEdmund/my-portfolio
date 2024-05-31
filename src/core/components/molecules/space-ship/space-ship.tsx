@@ -6,12 +6,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?: string }) {
+function SpaceShip({
+  className = "",
+  imgSx = "",
+}: {
+  className?: string;
+  imgSx?: string;
+}) {
   const [shipSrc, setSpiSrc] = useState<string>("/space-craft-idling.svg");
 
   const [dragConstraints, setDragConstraints] = useState({
-    top: 0, bottom: 0,
-    left: 0, right: 0,
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
   });
 
   const startEngine = () => {
@@ -26,14 +34,19 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
     if (typeof window === "undefined") return;
 
     setDragConstraints({
-      top: -(window.innerHeight * 1.5), bottom: window.innerHeight,
-      left: -window.innerWidth * 0.4, right: window.innerWidth * 0.4
+      top: -(window.innerHeight * 1.5),
+      bottom: window.innerHeight,
+      left: -window.innerWidth * 0.4,
+      right: window.innerWidth * 0.4,
     });
   }, []);
 
   return (
     <motion.div
-      className={cn("z-[4] w-fit h-fit rounded-2xl mx-auto bg-transparent flex items-center justify-center text-center", className)}
+      className={cn(
+        "z-[4] w-fit h-fit rounded-2xl mx-auto bg-transparent flex items-center justify-center text-center",
+        className
+      )}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 1.1 }}
       drag
@@ -55,9 +68,14 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
     >
       <DynamicText
         writerOptions={{
-          words: ["let's goOO! 😅", "sky's not even a limit", "if we work", "so let's work"],
+          words: [
+            "let's goOO! 😅",
+            "sky's not even a limit",
+            "if we work",
+            "so let's work",
+          ],
           loop: 2,
-          cursorStyle: "_"
+          cursorStyle: "_",
         }}
         className="absolute top-[-10px] left-[50%] font-light text-[0.7rem] sm:text-[1rem] bg-white text-app-dark-600 rounded-sm p-[5px]"
       />
@@ -73,8 +91,6 @@ function SpaceShip({ className = "", imgSx = "" }: { className?: string; imgSx?:
       />
     </motion.div>
   );
-};
+}
 
-export {
-  SpaceShip,
-};
+export { SpaceShip };

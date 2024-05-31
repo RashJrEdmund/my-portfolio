@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import NavBar from "./nav-bar";
 
 describe("NavBar", () => {
-  it("Should have h1 text \"Orashus\"", () => {
+  it('Should have h1 text "Orashus"', () => {
     const { getByRole } = render(<NavBar />);
 
     const h1 = getByRole("heading", { level: 1 });

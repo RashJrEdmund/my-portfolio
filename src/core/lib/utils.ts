@@ -13,7 +13,4 @@ function waitAndResolve<T>(data: T, time: number = 2000) {
   });
 }
 
-export {
-  cn,
-  waitAndResolve,
-};
+export { cn, waitAndResolve };

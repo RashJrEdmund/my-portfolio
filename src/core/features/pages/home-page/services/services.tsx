@@ -18,7 +18,8 @@ function Services() {
             </p>
 
             <p className="font-light text-app-text-200 sm:font-normal sm:max-w-[400px]">
-              Discover the best services I offer, designed to ensure the success of your project.
+              Discover the best services I offer, designed to ensure the success
+              of your project.
             </p>
           </div>
         </div>
@@ -28,7 +29,7 @@ function Services() {
             Skill Set
           </h3>
 
-          <div className="w-full flex flex-col items-center justify-center sm:grid grid-auto-fill-350 2xl:flex 2xl:flex-row gap-4 gap-y-6">
+          <div className="w-full flex flex-col items-center justify-center sm:grid grid-auto-fill-350 2xl:flex 2xl:flex-row gap-4 gap-y-6 xl:gap-y-14">
             <Suspense fallback={<SillShimmer />}>
               <Skills />
             </Suspense>
@@ -37,8 +38,6 @@ function Services() {
       </div>
     </div>
   );
-};
+}
 
-export {
-  Services
-};
+export { Services };

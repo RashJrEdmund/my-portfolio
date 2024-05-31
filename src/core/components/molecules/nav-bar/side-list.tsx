@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   HoverCard,
   HoverCardContent,
-  HoverCardTrigger
+  HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -29,8 +29,8 @@ const SIDE_LIST = [
       {
         subLabel: "About",
         subHref: "#about",
-      }
-    ]
+      },
+    ],
   },
   {
     label: "Blog",
@@ -48,8 +48,8 @@ const SIDE_LIST = [
         subLabel: "Similar",
         subHref: "#similar",
       },
-    ]
-  }
+    ],
+  },
 ];
 
 export default function SideList() {
@@ -57,37 +57,39 @@ export default function SideList() {
 
   return (
     <ul className="flex items-center justify-center gap-4">
-      {
-        SIDE_LIST.map(({ label, href, subList }) => (
-          <HoverCard key={label}>
-            <HoverCardTrigger className="group relative w-fit" asChild>
-              <Link
-                href={href}
-                className={cn("inline-block font-semibold hover:text-app-blue-500 duration-300", pathname === href ? "text-app-blue-500" : "")}
-              >
-                {label}
-              </Link>
-            </HoverCardTrigger>
+      {SIDE_LIST.map(({ label, href, subList }) => (
+        <HoverCard key={label}>
+          <HoverCardTrigger className="group relative w-fit" asChild>
+            <Link
+              href={href}
+              className={cn(
+                "inline-block font-semibold hover:text-app-blue-500 duration-300",
+                pathname === href ? "text-app-blue-500" : ""
+              )}
+            >
+              {label}
+            </Link>
+          </HoverCardTrigger>
 
-            <HoverCardContent asChild className="bg-app-dark-200 text-app-text-500 w-fit mt-4 rounded-none">
-              <ul className="flex items-center justify-center gap-4">
-                {
-                  subList?.map(({ subLabel, subHref }) => (
-                    <li key={subLabel} className="w-fit">
-                      <Link
-                        href={href + subHref}
-                        className="inline-block hover:text-app-blue-500 text-nowrap"
-                      >
-                        {subLabel}
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </HoverCardContent>
-          </HoverCard>
-        ))
-      }
+          <HoverCardContent
+            asChild
+            className="bg-app-dark-200 text-app-text-500 w-fit mt-4 rounded-none"
+          >
+            <ul className="flex items-center justify-center gap-4">
+              {subList?.map(({ subLabel, subHref }) => (
+                <li key={subLabel} className="w-fit">
+                  <Link
+                    href={href + subHref}
+                    className="inline-block hover:text-app-blue-500 text-nowrap"
+                  >
+                    {subLabel}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </HoverCardContent>
+        </HoverCard>
+      ))}
     </ul>
   );
 }
