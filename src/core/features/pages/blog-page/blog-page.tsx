@@ -46,7 +46,7 @@ export default function BlogPage() {
         <DialogContent className="max-w-[min(90vw,_400px)] py-12 rounded-lg">
           <form
             action={addToWaitListAction}
-            className="flex flex-col gap-2 text-app-dark-600 "
+            className="flex flex-col gap-2 text-app-dark-700 "
           >
             <label htmlFor="email" className="font-light">
               Add your email to wait list

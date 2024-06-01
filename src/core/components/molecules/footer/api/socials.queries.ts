@@ -28,6 +28,12 @@ const SocialAccounts: SocialHandle[] = [
   },
   {
     id: "5",
+    name: "Medium",
+    username: "orashusedmund",
+    href: "https://medium.com/@orashusedmund",
+  },
+  {
+    id: "6",
     name: "StackOverFlow",
     username: "orashus",
     href: "https://stackoverflow.com/users/21746512/orashus",
@@ -35,7 +41,7 @@ const SocialAccounts: SocialHandle[] = [
 ];
 
 const getSocials = () => {
-  return waitAndResolve(SocialAccounts, 400);
+  return waitAndResolve(SocialAccounts, 4000);
 };
 
 export { getSocials };

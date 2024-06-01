@@ -4,7 +4,7 @@ import type { Skill } from "../../api/interface";
 import Image from "next/image";
 import { ServiceSVGObj } from "@/components/ui/svg";
 
-function SillShimmer() {
+function SkillShimmer() {
   return (
     <>
       {Array.from({ length: 4 }, (_, i) => i).map((i) => (
@@ -73,7 +73,7 @@ async function Skills() {
 }
 
 export {
-  SillShimmer,
+  SkillShimmer,
   SkillComponent, // exporting to be tested
   Skills,
 };

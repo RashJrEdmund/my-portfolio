@@ -1,15 +1,23 @@
 import { Banner } from "./banner/banner";
+import { Coding } from "./coding/coding";
+import { Projects } from "./projects/projects";
 import { Services } from "./services/services";
 import { WorkExperience } from "./work-experience/work-experience";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-start gap-16 xl:gap-4">
-      <Banner />
+    <main className="flex flex-col items-center justify-start">
+      <div className="w-full h-fit flex flex-col items-center justify-center gap-16 xl:gap-4">
+        <Banner />
 
-      <Services />
+        <Services />
 
-      <WorkExperience />
+        <WorkExperience />
+
+        <Projects />
+      </div>
+
+      <Coding />
     </main>
   );
 }

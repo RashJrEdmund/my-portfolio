@@ -16,8 +16,8 @@ async function ExperienceList() {
 
 function WorkExperience() {
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="w-full max-w-app-dynamic-max-w mx-auto min-h-app-section-min-h">
+    <div id="work-experience" className="w-full flex items-center justify-center">
+      <div className="w-full max-w-app-dynamic-max-w mx-auto min-h-app-section-min-h pb-17">
         <SpaceShip />
 
         <h3 className="font-semibold text-[1.3rem] md:text-[2rem] w-fit mx-auto mb-11">

@@ -3,8 +3,9 @@ import { getSocials } from "./api/socials.queries";
 import type { SocialHandle } from "./api/types";
 import { SmallLineSvg } from "@/components/ui/svg";
 import Link from "next/link";
+import { CopyButton } from "./copy-button";
 
-function HandleCard({
+function SocialHandleCard({
   handle: { id, name, username, href },
 }: {
   handle: SocialHandle;
@@ -30,7 +31,7 @@ export default async function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full h-fit min-h-[20vh] mt-12 self-end flex flex-col items-center justify-center gap-8 bg-app-dark-600"
+      className="w-full h-fit min-h-[20vh] self-end flex flex-col items-center justify-center gap-8 bg-app-dark-700"
     >
       <div className="w-full max-w-app-dynamic-max-w mx-auto flex flex-col md:flex-row items-start justify-between gap-8 py-8">
         <HeaderLogo hTagLevel="h2" imgSx="inline" />
@@ -45,7 +46,7 @@ export default async function Footer() {
             <ul className="flex flex-col gap-y-2 sm:gap-y-4">
               {SocialHandles.length ? (
                 SocialHandles.map((handle) => (
-                  <HandleCard key={handle.id} handle={handle} />
+                  <SocialHandleCard key={handle.id} handle={handle} />
                 ))
               ) : (
                 <li>Rash hasn&apos;t added any handles yet</li>
@@ -74,7 +75,9 @@ export default async function Footer() {
                   <p className="font-semibold text-[1rem] text-nowrap">
                     {name}
                   </p>
-                  <p className="font-light break-all">{val}</p>
+                  <p className="font-light break-all">
+                    {val} <CopyButton value={val} label={name} />
+                  </p>
                 </li>
               ))}
             </ul>

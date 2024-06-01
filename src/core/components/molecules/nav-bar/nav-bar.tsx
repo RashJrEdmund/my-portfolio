@@ -5,7 +5,7 @@ import { HeaderLogo } from "@/components/ui/text-logo";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-600">
+    <nav className="fixed top-0 left-0 w-full z-10 flex items-start justify-center bg-app-dark-700">
       <div className="flex-1 w-full max-w-app-dynamic-max-w mx-auto py-4 flex items-center justify-between">
         <HeaderLogo />
 

@@ -86,6 +86,7 @@ const config = {
             200: "var(--app-dark-200)",
             500: "var(--app-dark-500)",
             600: "var(--app-dark-600)",
+            700: "var(--app-dark-700)",
           },
         },
       },
@@ -124,6 +125,7 @@ const config = {
       // for adding custom utilities. // https://tailwindcss.com/docs/plugins
 
       const newUtilities = {
+        // GRID
         ".grid-auto-fill-350": {
           "grid-template-columns": "repeat(auto-fill, minmax(350px, 1fr))",
         },
@@ -136,6 +138,12 @@ const config = {
         ".grid-auto-fill-400": {
           "grid-template-columns": "repeat(auto-fill, minmax(400px, 1fr))",
         },
+
+        // TEXT WRITING MODE
+        ".writing-mode-up-lr": {
+          "writing-mode": "vertical-rl",
+          "text-orientation": "mixed",
+        }
       };
       addUtilities(newUtilities);
     }),

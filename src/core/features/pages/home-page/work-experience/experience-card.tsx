@@ -12,12 +12,12 @@ function ExperienceShimmer() {
       {[1, 2, 3].map((val) => (
         <Skeleton
           key={val}
-          className="w-full max-w-[400px] min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4"
+          className="w-full sm:max-w-[400px] xl:max-w-[550px] min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4"
         >
           <Skeleton className="w-full flex items-center justify-start gap-4 bg-transparent">
-            <Skeleton className="w-[50px] h-[50px] rounded-full bg-app-shimmer-300" />
+            <Skeleton className="w-[60px] h-[60px] rounded-full bg-app-shimmer-300" />
 
-            <Skeleton className="w-[80%] h-[30px] bg-app-shimmer-300" />
+            <Skeleton className="w-[90%] h-[50px] bg-app-shimmer-300" />
           </Skeleton>
 
           <Skeleton className="w-full h-[250px] bg-app-shimmer-300" />
@@ -31,9 +31,9 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   return (
     <CardContainer
       className="inter-var w-full h-fit p-0"
-      containerClassName="w-full h-fit max-w-[400px] p-0"
+      containerClassName="w-full h-fit sm:max-w-[400px] xl:max-w-[550px] p-0"
     >
-      <CardBody className="w-full h-fit min-h-[380px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
+      <CardBody className="w-full h-fit min-h-[340px] sm:min-h-[420px] xl:min-h-[340px] flex flex-col items-start justify-start gap-2 bg-app-dark-200 p-8 py-4">
         <CardItem
           translateZ={50}
           className="w-full flex items-center justify-start gap-4"
@@ -46,13 +46,18 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             className="rounded-full w-[50px] h-[50px] bg-cover bg-center bg-no-repeat"
           />
 
-          <h2 className="font-semibold text-[1.2rem] md:text-[1.5rem] text-nowrap">
-            {experience.organization}
-            <Link href="/" className="w-fit ml-4">
-              <FollowLinkSvg />
-            </Link>
-          </h2>
+          <div className="flex flex-col gap-[8px]">
+            <h2 className="font-semibold text-[1.2rem] md:text-[1.5rem] text-nowrap">
+              {experience.organization}
+              <Link href="/" className="w-fit ml-4">
+                <FollowLinkSvg />
+              </Link>
+            </h2>
+
+            <p className="font-light">{experience.role}</p>
+          </div>
         </CardItem>
+
         <CardItem as="p" translateZ={55} className="font-light">
           {experience.orgDescription}
         </CardItem>
