@@ -54,7 +54,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               </Link>
             </h2>
 
-            <p className="font-light">{experience.role}</p>
+            <p className="font-light" data-testid="role">{experience.role}</p>
           </div>
         </CardItem>
 

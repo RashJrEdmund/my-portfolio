@@ -1,4 +1,5 @@
 import { Banner } from "./banner/banner";
+import { Certifications } from "./certifications/certifications";
 import { Coding } from "./coding/coding";
 import { Projects } from "./projects/projects";
 import { Services } from "./services/services";
@@ -15,6 +16,8 @@ export default function HomePage() {
         <WorkExperience />
 
         <Projects />
+
+        <Certifications />
       </div>
 
       <Coding />
