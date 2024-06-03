@@ -37,7 +37,7 @@ function Banner() {
             className="max-w-[600px] text-app-text-200 font-light sm:font-normal md:text-[1.2rem]"
             data-testid="aftawallet-internship-heading"
           >
-            I&apos;m a skilled software developer with a perfect understanding
+            I&apos;m a detail oriented, skilled software developer with a perfect understanding
             of TypeScript and JavaScript, very basic knowledge of Java, and
             expertise in frameworks like NextJs, React, NestJ, and Express.
             I&apos;m a quick learner and can collaborate closely with clients to
@@ -48,7 +48,7 @@ function Banner() {
           <BannerCTA />
         </div>
 
-        <div className="w-full min-w-[250px] flex items-center justify-center md:justify-end 2xl:justify-center border md:border-none">
+        <div className="w-full min-w-[250px] flex items-center justify-center md:justify-end 2xl:justify-center">
           <Image src="/logo.png" alt="rash dev logo" height={500} width={500} />
         </div>
       </div>
