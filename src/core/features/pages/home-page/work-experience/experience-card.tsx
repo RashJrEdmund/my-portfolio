@@ -49,7 +49,12 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           <div className="flex flex-col gap-[8px]">
             <h2 className="font-semibold text-[1.2rem] md:text-[1.5rem] text-nowrap">
               {experience.organization}
-              <Link href="/" className="w-fit ml-4">
+
+              <Link
+                href="/"
+                target="_blank"
+                className="w-fit ml-4"
+              >
                 <FollowLinkSvg />
               </Link>
             </h2>

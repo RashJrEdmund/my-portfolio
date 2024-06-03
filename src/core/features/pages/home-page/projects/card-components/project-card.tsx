@@ -128,6 +128,7 @@ function ProjectCard({
         project.isPrivateRepo ? null : (
           <Link
             href={project.gitHubRepo}
+            target="_blank"
             className="w-fit flex items-center justify-center text-app-blue-500"
             title="visit public repo"
           >
