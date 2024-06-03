@@ -31,7 +31,7 @@ function FollowLinkSvg({ className, ...restProps }: Props) {
   return (
     <svg
       {...restProps}
-      className={cn("inline", className || "")}
+      className={cn("inline w-[20px] h-[20px]", className || "")}
       width="24"
       height="24"
       viewBox="0 0 24 24"

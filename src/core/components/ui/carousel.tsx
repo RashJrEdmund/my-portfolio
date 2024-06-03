@@ -125,7 +125,7 @@ const Carousel = React.forwardRef<
     // my custom use effect to update if i can scroll or not.
     React.useEffect(() => {
       if (onCarouselScroll) onCarouselScroll({ canScrollNext, canScrollPrev });
-    }, [canScrollNext, canScrollPrev, onCarouselScroll]);
+    }, [canScrollNext, canScrollPrev]);
 
     return (
       <CarouselContext.Provider
