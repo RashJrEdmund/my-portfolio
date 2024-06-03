@@ -107,13 +107,18 @@ function ProjectCard({
             </div>
           </div>
 
-          <span
-            className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
-            onClick={toggleTechStack}
-          >
-            {showTechStack ? "hide" : "show"}
-            <Icon icon="tool" size={15} />
-          </span>
+          {
+            project.tabValues.includes("backend") ? null : (
+              <span
+                className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
+                onClick={toggleTechStack}
+                title={`${showTechStack ? "hide" : "show"} tech stack`}
+              >
+                {showTechStack ? "hide" : "show"}
+                <Icon icon="tool" size={15} />
+              </span>
+            )
+          }
         </div>
 
         <p className="font-normal leading-6 min-h-[100px]">{project.description}</p>
