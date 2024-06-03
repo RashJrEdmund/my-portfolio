@@ -89,7 +89,7 @@ export default async function Footer() {
         <hr className="border-app-blue-500" />
 
         <div className="py-6">
-          Made with 💙 by <span>Rash</span>
+          Made with 💙 by <span>Orashus ( Rash )</span>
         </div>
       </div>
     </footer>

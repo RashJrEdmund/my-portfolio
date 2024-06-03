@@ -1,4 +1,4 @@
-import type { Experience } from "../../api/interface";
+import type { Experience } from "../api/interface";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { FollowLinkSvg } from "@/components/ui/svg";

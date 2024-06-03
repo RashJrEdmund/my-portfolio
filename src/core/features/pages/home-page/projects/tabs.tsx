@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectsShimmer, ProjectsContainer } from "./card-components/project-container";
 
 import { cn } from "@/lib/utils";
-import { type TabValues, ArrTabValues } from "../../api/interface";
+import { type TabValues, ArrTabValues } from "../api/interface";
 
 interface TabProjectData {
   tabs: {

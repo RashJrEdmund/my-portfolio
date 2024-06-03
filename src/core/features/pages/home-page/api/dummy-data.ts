@@ -5,7 +5,7 @@ const SkillData: Skill[] = [
     id: "1",
     label: "Attention to details",
     description:
-      "A have a keep eye not just for design, but for code smells, and properly coding patterns.",
+      "I have a keen eye not just for design, but for code smells, and proper coding patterns.",
   },
   {
     id: "2",
@@ -17,13 +17,13 @@ const SkillData: Skill[] = [
     id: "3",
     label: "Logical Approach",
     description:
-      "I always strive to tackle a problem as the best way I can. Constantly seeking for ways to improve code quality and efficiency.",
+      "I always strive to tackle a problem the best way I can. Constantly seeking for ways to improve code quality and efficiency.",
   },
   {
     id: "4",
     label: "Creative Ability",
     description:
-      "A key factor all developers, front and back, should posses. I do believe that everything and anything can be made intuitive and fun to work with.",
+      "A key factor all developers (both front and back) should posses. I do believe that everything and anything can be made intuitive and fun to work with.",
   },
 ];
 
@@ -32,7 +32,7 @@ const ExperienceData: Experience[] = [
     id: "1",
     organization: "AftaWallet",
     orgDescription:
-      "A fin tech start up base in Kigali Rwanda, with a vision to make money transfer easy across a number of African countries",
+      "A fin-tech start up base in Kigali Rwanda, with a vision to make money transfer easy across a number of African countries",
     orgLink: "https://aftawallet.com/",
     orgLogo: "/org-logos/afta-wallet.jpeg",
     role: "Front End Developer",
@@ -55,7 +55,7 @@ const ExperienceData: Experience[] = [
     achievements: [
       "Handle and consumed Restful APIs on the frontend",
       "Built Apis for authentication, with TypeScript always at the core",
-      "Collaborated in building good user interfaces",
+      "Collaborated (remotely) in building good user interfaces",
     ],
     startDate: "2024-05-30T12:43:11.700Z",
     endDate: "2024-05-30T12:43:11.700Z",
@@ -65,7 +65,7 @@ const ExperienceData: Experience[] = [
     organization: "Rebase Academy",
     orgLink: "https://www.linkedin.com/in/rebase-academy-/",
     orgDescription:
-      "Full-Stack Web Development BootCamps Web Design (UI/UX) BootCamps",
+      "Full-Stack Web Development BootCamp, with a goal to transform anyone into a qualified developer",
     orgLogo: "/org-logos/rebase-academy.jpeg",
     role: "Front End Mentor | JS Mentor",
     achievements: [
@@ -84,7 +84,7 @@ const ProjectData: Project[] = [
   {
     id: "1",
     name: "R - Cloud",
-    description: "A cloud storage PWA (Progressive, Web App), designed with figma and built for storing and managing files online. I personally use it to save some of my files. I even used it on this portfolio to save some of these assets",
+    description: "A cloud storage PWA (Progressive, Web App), designed with figma and built for storing and managing files online. I personally use it to save some of my files. I even used it on this portfolio to save some of these assets. It has a great monetization ability",
     url: "https://r-cloud.vercel.app",
     tabValues: ["favorites"],
     images: [
@@ -232,6 +232,36 @@ const ProjectData: Project[] = [
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/casino_brand",
+    isPrivateRepo: false,
+  },
+  {
+    id: "5",
+    name: "My first portfolio",
+    description: "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 😂), but for the story behind it 🫶🏾 😊",
+    url: "https://rashjredmund.github.io/Portfolio/",
+    tabValues: ["favorites", "html&css"],
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-banner-1717413269428.png?alt=media&token=2a441828-2f1d-4e8c-9fe2-de918bbf3bf7",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-projects-1717413254475.png?alt=media&token=53171725-2f0a-4097-bbe0-b98f73d42a75",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-footer-1717413247454.png?alt=media&token=b62024e3-735f-447b-a589-8635115a6ffc",
+    ],
+    logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-logo-1717413213488.jpeg?alt=media&token=9b25f06c-6f2b-4bea-9ff5-255ab92fa44d",
+    tags: [
+      {
+        id: "1",
+        label: "HTML",
+        bgColor: "#dd4b25",
+        textColor: "#fff",
+      },
+      {
+        id: "2",
+        label: "CSS",
+        bgColor: "#254bdd",
+        textColor: "#fff",
+      }
+    ],
+    dateCreated: "",
+    gitHubRepo: "https://github.com/RashJrEdmund/Portfolio",
     isPrivateRepo: false,
   }
 ];

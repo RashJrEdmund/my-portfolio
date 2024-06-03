@@ -1,5 +1,5 @@
 import { SpaceShip } from "@/components/molecules/space-ship/space-ship";
-import { getExperiences } from "../../api/queries";
+import { getExperiences } from "../api/queries";
 import { Suspense } from "react";
 import { ExperienceCard, ExperienceShimmer } from "./experience-card";
 

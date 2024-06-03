@@ -1,7 +1,7 @@
-import { type TabValues } from "../../../api/interface";
+import { type TabValues } from "../../api/interface";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { getProjects } from "../../../api/queries";
+import { getProjects } from "../../api/queries";
 import { ProjectCard } from "./project-card";
 
 function ProjectsShimmer() {

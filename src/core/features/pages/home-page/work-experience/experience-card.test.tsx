@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import type { Experience } from "../../api/interface";
+import type { Experience } from "../api/interface";
 import { ExperienceCard } from "./experience-card";
 
 const sampleExperience: Experience = {

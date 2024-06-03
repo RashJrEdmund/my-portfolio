@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
-import { getSkills } from "../../api/queries";
-import type { Skill } from "../../api/interface";
+import { getSkills } from "../api/queries";
+import type { Skill } from "../api/interface";
 import Image from "next/image";
 import { ServiceSVGObj } from "@/components/ui/svg";
 

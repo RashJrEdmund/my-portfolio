@@ -1,6 +1,6 @@
 "use client";
 
-import type { Project } from "../../../api/interface";
+import type { Project } from "../../api/interface";
 import Image from "next/image";
 import Link from "next/link";
 import { FollowLinkSvg } from "@/components/ui/svg";
@@ -94,9 +94,9 @@ function ProjectCard({
 
               <Link
                 href={project.url}
+                target="_blank"
                 className="text-app-blue-500 md:text-app-text-200 md:hover:text-app-blue-500"
               >
-                visit
                 <FollowLinkSvg />
               </Link>
             </div>

@@ -1,5 +1,5 @@
 import { Skeleton } from "@/components/ui/skeleton";
-import { getCertificates } from "../../api/queries";
+import { getCertificates } from "../api/queries";
 import Link from "next/link";
 import { FollowLinkSvg } from "@/components/ui/svg";
 import Image from "next/image";
