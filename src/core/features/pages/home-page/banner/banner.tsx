@@ -39,7 +39,7 @@ function Banner() {
           >
             I&apos;m a detail oriented, skilled software developer with a perfect understanding
             of TypeScript and JavaScript, very basic knowledge of Java, and
-            expertise in frameworks like NextJs, React, NestJ, and Express.
+            expertise in frameworks like NextJs, React, NestJs, and Express.
             I&apos;m a quick learner and can collaborate closely with clients to
             create efficient, scalable, and user-friendly solutions that solve
             real-world problems.
