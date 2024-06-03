@@ -1,5 +1,5 @@
 import { waitAndResolve } from "@/lib/utils";
-import { ExperienceData, ProjectData, SkillData } from "./dummy-data";
+import { CertificateData, ExperienceData, ProjectData, SkillData } from "./dummy-data";
 import { type TabValues } from "./interface";
 
 const getSkills = () => {
@@ -18,4 +18,8 @@ const getProjects = async (tabValue: TabValues) => {
   return projects.filter((p) => p.tabValues.includes(tabValue));
 };
 
-export { getSkills, getExperiences, getProjects };
+const getCertificates = () => {
+  return waitAndResolve(CertificateData, 300);
+};
+
+export { getSkills, getExperiences, getProjects, getCertificates };

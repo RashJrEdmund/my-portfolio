@@ -236,4 +236,23 @@ const ProjectData: Project[] = [
   }
 ];
 
-export { SkillData, ExperienceData, ProjectData };
+// CERTIFICATES AND ACHIEVEMENTS
+
+const CertificateData = [
+  {
+    id: "1",
+    title: "HackerRank JavaScript Developer (Basic)",
+    url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
+    previewImg: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-basic-1717359420485.png?alt=media&token=02a68a7f-d819-42e0-a88a-6e6e9ec99561",
+    dateArchived: "6/17/2023",
+  },
+  {
+    id: "2",
+    title: "HackerRank JavaScript Developer (Intermediate)",
+    url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
+    previewImg: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-intermediate-1717359441118.png?alt=media&token=f0d84986-ea75-4a08-b768-5974b0d13c4d",
+    dateArchived: "10/6/2023",
+  }
+];
+
+export { SkillData, ExperienceData, ProjectData, CertificateData };
