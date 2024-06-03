@@ -7,6 +7,7 @@ import { FollowLinkSvg } from "@/components/ui/svg";
 import { Icon } from "@/components/primitives/icon";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 function ImageCarousel({ images }: { images: string[] }) {
   const [canScroll, setCanScroll] = useState({
@@ -63,7 +64,7 @@ function ProjectCard({
       <div className="flex flex-col gap-4 w-full h-fit">
         {
           showTechStack ? (
-            <div className="absolute z-[5] top-0 left-0 m-4 mt-5 flex flex-wrap items-start justify-start max-w-[300px] gap-2">
+            <div className={cn(project.tabValues.includes("backend") ? "" : "absolute", "z-[5] top-0 left-0 m-4 mt-5 flex flex-wrap items-start justify-start max-w-[300px] gap-2")}>
               {
                 project.tags?.map(({ id, label, bgColor, textColor }) => (
                   <span
@@ -78,7 +79,11 @@ function ProjectCard({
           ) : null
         }
 
-        <ImageCarousel images={project.images} />
+        {
+          project.images.length > 0 ? (
+            <ImageCarousel images={project.images} />
+          ) : null
+        }
 
         <div className="w-full flex items-center justify-between gap-4 flex-nowrap">
           <div className="w-full flex items-center justify-start gap-4">
