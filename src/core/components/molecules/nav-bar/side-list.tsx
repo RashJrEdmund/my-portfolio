@@ -34,6 +34,10 @@ const SIDE_LIST = [
         subLabel: "About",
         subHref: "#about",
       },
+      {
+        subLabel: "Accolades",
+        subHref: "#accolades",
+      },
     ],
   },
   {
@@ -77,9 +81,9 @@ export default function SideList() {
 
           <HoverCardContent
             asChild
-            className="bg-app-dark-200 text-app-text-500 w-fit mt-4 rounded-none border-0"
+            className="bg-app-dark-200 text-app-text-500 w-fit mt-4 rounded-none border-0 max-w-[90vw]"
           >
-            <ul className="flex items-center justify-center gap-4">
+            <ul className="flex flex-wrap md:flex-nowrap items-center justify-center gap-4">
               {subList?.map(({ subLabel, subHref }) => (
                 <li key={subLabel} className="w-fit">
                   <Link

@@ -7,8 +7,6 @@ describe("NavBar", () => {
 
     const h1 = getByRole("heading", { level: 1 });
 
-    console.log({ h1 });
-
     expect(h1).toBeInTheDocument();
 
     expect(h1).toHaveTextContent("Orashus");

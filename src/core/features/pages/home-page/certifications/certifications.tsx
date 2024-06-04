@@ -3,7 +3,7 @@ import { CertificateContainer, CertificateShimmer } from "./certificate-containe
 
 function Certifications() {
   return (
-    <div className="w-full max-w-app-dynamic-max-w h-fit flex items-center justify-center">
+    <div id="accolades" className="w-full max-w-app-dynamic-max-w h-fit flex items-center justify-center">
       <div className="w-full min-h-app-section-min-h flex flex-col items-center justify-center pt-8 pb-12">
         <h3 className="font-semibold text-[1.3rem] md:text-[2rem] w-fit mx-auto mb-11">
           Certificates and achievements

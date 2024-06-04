@@ -35,8 +35,8 @@ function SpaceShip({
     if (typeof window === "undefined") return;
 
     setDragConstraints({
-      top: -(window.innerHeight * 1.5),
-      bottom: window.innerHeight * 2.2,
+      top: -(window.innerHeight * 1.8),
+      bottom: window.innerHeight * 3.8,
       left: -window.innerWidth * 0.4,
       right: window.innerWidth * 0.4,
     });
