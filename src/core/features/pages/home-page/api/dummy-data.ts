@@ -32,7 +32,7 @@ const ExperienceData: Experience[] = [
     id: "1",
     organization: "AftaWallet",
     orgDescription:
-      "A fin-tech start up base in Kigali Rwanda, with a vision to make money transfer easy across a number of African countries",
+      "A fin-tech start-up based in Kigali Rwanda, with a vision to make money transfer easy across a number of African countries",
     orgLink: "https://aftawallet.com/",
     orgLogo: "/org-logos/afta-wallet.jpeg",
     role: "Front End Developer",
@@ -65,13 +65,13 @@ const ExperienceData: Experience[] = [
     organization: "Rebase Academy",
     orgLink: "https://www.linkedin.com/in/rebase-academy-/",
     orgDescription:
-      "Full-Stack Web Development BootCamp, with a goal to transform anyone into a qualified developer",
+      "Full-Stack Web Development BootCamp, with the goal of transforming anyone into a qualified developer",
     orgLogo: "/org-logos/rebase-academy.jpeg",
     role: "Front End Mentor | JS Mentor",
     achievements: [
-      "Assisted newer developers to understanding certain key concepts about JavaScript",
+      "Assisted newer developers in understanding certain key concepts about JavaScript",
       "Collaborated in building good user interfaces",
-      "Assisted new devs and saw them through a few but rather challenging aspect of JS, HTML, and CSS",
+      "Assisted new devs and saw them through a few but rather challenging aspects of JS, HTML, and CSS",
     ],
     startDate: "2024-05-30T12:43:11.700Z",
     endDate: "2024-05-30T12:43:11.700Z",
@@ -273,6 +273,12 @@ const ProjectData: Project[] = [
         id: "1",
         label: "Fastify",
         bgColor: "#000",
+        textColor: "#fff",
+      },
+      {
+        id: "2",
+        label: "MongoDb",
+        bgColor: "green",
         textColor: "#fff",
       },
     ],
