@@ -4,7 +4,10 @@ import { Suspense } from "react";
 
 function Projects() {
   return (
-    <div id="projects" className="w-full flex items-center justify-center bg-app-dark-200 p-8 pb-14">
+    <div
+      id="projects"
+      className="w-full flex items-center justify-center bg-app-dark-200 p-8 pb-14"
+    >
       <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-h flex flex-col items-center justify-center gap-14">
         <div className="w-full flex flex-col sm:flex-row items-start justify-between gap-4">
           <h3 className="font-bold text-[1.6rem] sm:text-[2rem] md:text-[3rem] max-w-[500px] leading-none">

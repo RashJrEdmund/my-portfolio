@@ -21,7 +21,9 @@ const sampleExperience: Experience = {
 
 describe("Experience Card", () => {
   it("Should render the right experience card", () => {
-    const { getByRole, getByText, getByTestId } = render(<ExperienceCard experience={sampleExperience} />);
+    const { getByRole, getByText, getByTestId } = render(
+      <ExperienceCard experience={sampleExperience} />
+    );
 
     sampleExperience.achievements.forEach((arch) => {
       expect(getByText(arch)).toBeInTheDocument();
@@ -34,7 +36,10 @@ describe("Experience Card", () => {
     const logo = getByRole("img");
 
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute("alt", sampleExperience.organization + " logo");
+    expect(logo).toHaveAttribute(
+      "alt",
+      sampleExperience.organization + " logo"
+    );
 
     const role = getByTestId("role");
 

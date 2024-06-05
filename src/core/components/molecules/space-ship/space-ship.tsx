@@ -57,15 +57,15 @@ function SpaceShip({
       onDirectionLock={(axis) => {
         console.log({ axis });
       }}
-    // onUpdate={(latest) => {
-    //   console.log({ latest });
+      // onUpdate={(latest) => {
+      //   console.log({ latest });
 
-    //   if (+latest.y < 0 ) {
-    //     setRotation("180deg");
-    //   } else {
-    //     setRotation("0deg")
-    //   }
-    // }}
+      //   if (+latest.y < 0 ) {
+      //     setRotation("180deg");
+      //   } else {
+      //     setRotation("0deg")
+      //   }
+      // }}
     >
       <DynamicText
         writerOptions={{
@@ -88,7 +88,9 @@ function SpaceShip({
         width={100}
         className={cn("w-[200px]", imgSx)}
         draggable={false}
-        title={engineStarted ? "Blur out to stop engine" : "Click to start engine"}
+        title={
+          engineStarted ? "Blur out to stop engine" : "Click to start engine"
+        }
         data-testid="space-ship"
       />
     </motion.div>

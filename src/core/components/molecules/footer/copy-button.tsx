@@ -5,8 +5,7 @@ import { toast } from "sonner";
 
 /**
  * Isolating this component due to not being able to add event listeners in server components
-*/;
-function CopyButton({ label, value }: { label: string; value: string }) {
+ */ function CopyButton({ label, value }: { label: string; value: string }) {
   const handleCopy = () => {
     toast.promise(navigator.clipboard.writeText(value), {
       success: `${label} copied to clipboard`,
@@ -22,6 +21,6 @@ function CopyButton({ label, value }: { label: string; value: string }) {
       data-testid="copy-button"
     />
   );
-};
+}
 
 export { CopyButton };

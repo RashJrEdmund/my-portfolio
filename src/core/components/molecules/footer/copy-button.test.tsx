@@ -3,7 +3,7 @@ import { CopyButton } from "./copy-button";
 
 const buttonProps = {
   value: "test-value",
-  label: "test-label"
+  label: "test-label",
 };
 
 describe("Copy Action Component", () => {

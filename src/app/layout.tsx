@@ -76,6 +76,7 @@ export default async function RootLayout({
           theme="system"
           pauseWhenPageIsHidden
           toastOptions={{
+            duration: 13000,
             classNames: {
               // closeButton: "bg-white",
             },

@@ -14,13 +14,16 @@ function Coding() {
           className=""
         />
 
-        <p data-testid="i-code-text" className="sm:font-semibold mt-4 text-center">
+        <p
+          data-testid="i-code-text"
+          className="sm:font-semibold mt-4 text-center"
+        >
           I literally code every single day. <br />
           And do my best to gain mastery over everything I do
         </p>
       </div>
     </div>
   );
-};
+}
 
 export { Coding };

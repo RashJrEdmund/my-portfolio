@@ -45,7 +45,4 @@ async function ProjectsContainer({ tabValue }: { tabValue: TabValues }) {
   );
 }
 
-export {
-  ProjectsShimmer,
-  ProjectsContainer,
-};
+export { ProjectsShimmer, ProjectsContainer };

@@ -39,15 +39,22 @@ interface Project {
   isPrivateRepo: boolean;
 }
 
-const ArrTabValues = ["favorites", "fullstack", "backend", "frontend", "html&css", "all"] as const;
+const ArrTabValues = [
+  "favorites",
+  "fullstack",
+  "backend",
+  "frontend",
+  "html&css",
+  "all",
+] as const;
 
-type TabValues = typeof ArrTabValues[number];
+type TabValues = (typeof ArrTabValues)[number];
 
 export { ArrTabValues };
 
 export type {
-  Skill, Experience,
-
+  Skill,
+  Experience,
   TabValues,
 
   // Project

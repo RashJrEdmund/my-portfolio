@@ -84,7 +84,8 @@ const ProjectData: Project[] = [
   {
     id: "1",
     name: "R - Cloud",
-    description: "A cloud storage PWA (Progressive, Web App), designed with figma and built for storing and managing files online. I personally use it to save some of my files. I even used it on this portfolio to save some of these assets. It has a great monetization ability, and other features I intend to add to it, like file sharing (Which I've figured out how to go about it) and other things we could talk about during our interview 🙂",
+    description:
+      "A cloud storage PWA (Progressive, Web App), designed with figma and built for storing and managing files online. I personally use it to save some of my files. I even used it on this portfolio to save some of these assets. It has a great monetization ability, and other features I intend to add to it, like file sharing (Which I've figured out how to go about it) and other things we could talk about during our interview 🙂",
     url: "https://r-cloud.vercel.app",
     tabValues: ["favorites"],
     images: [
@@ -114,7 +115,7 @@ const ProjectData: Project[] = [
         label: "PWA",
         bgColor: "purple",
         textColor: "#fff",
-      }
+      },
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/r-cloud",
@@ -123,7 +124,8 @@ const ProjectData: Project[] = [
   {
     id: "2",
     name: "Krash - Weather",
-    description: "A simple yet beautiful weather APP, It is one among the many projects I built when I started out with NextJs, It has automatic geo-weather detection, (making use of Ipgeolocation), search features, and a 5 day weather forecast with each day having 8 forecasts with a 3 hour spacing",
+    description:
+      "A simple yet beautiful weather APP, It is one among the many projects I built when I started out with NextJs, It has automatic geo-weather detection, (making use of Ipgeolocation), search features, and a 5 day weather forecast with each day having 8 forecasts with a 3 hour spacing",
     url: "https://krash-weather.vercel.app/",
     tabValues: ["favorites", "frontend"],
     images: [
@@ -151,7 +153,7 @@ const ProjectData: Project[] = [
         label: "IPGeolocation",
         bgColor: "purple",
         textColor: "#fff",
-      }
+      },
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/krash-weather-app",
@@ -160,7 +162,8 @@ const ProjectData: Project[] = [
   {
     id: "3",
     name: "Portfolio",
-    description: "My portfolio and blog site, designed with figma, and built to show case my abilities, so I can get hired and get paid to work 🙂. Don't forget to play with the mini space-ship parked right above the \"Experience section\"",
+    description:
+      'My portfolio and blog site, designed with figma, and built to show case my abilities, so I can get hired and get paid to work 🙂. Don\'t forget to play with the mini space-ship parked right above the "Experience section"',
     url: "https://orashus.vercel.app/",
     tabValues: ["favorites", "fullstack"],
     images: [
@@ -199,7 +202,7 @@ const ProjectData: Project[] = [
         label: "PWA",
         bgColor: "purple",
         textColor: "#fff",
-      }
+      },
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/my-portfolio",
@@ -208,7 +211,8 @@ const ProjectData: Project[] = [
   {
     id: "4",
     name: "Mini - Link",
-    description: "A url shortener I built with svelteKit (TS), Tailwind, SASS (for the table, I didn't wanna write Tailwind for that), Fastify (for auth), Express (for redirects) and shortening, MongoDb. It should've been among my favorite list but render.com shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 At times you'll have to refresh and wait till the service reboots.",
+    description:
+      "A url shortener I built with svelteKit (TS), Tailwind, SASS (for the table, I didn't wanna write Tailwind for that), Fastify (for auth), Express (for redirects) and shortening, MongoDb. It should've been among my favorite list but render.com shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 At times you'll have to refresh and wait till the service reboots.",
     url: "https://mini-link.vercel.app/",
     tabValues: ["fullstack"],
     images: [
@@ -263,7 +267,8 @@ const ProjectData: Project[] = [
   {
     id: "5",
     name: "Mini - Link (Auth)",
-    description: "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express",
+    description:
+      "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express",
     url: "https://mini-link-auth.onrender.com/",
     tabValues: ["backend"],
     images: [],
@@ -289,7 +294,8 @@ const ProjectData: Project[] = [
   {
     id: "6",
     name: "Casino",
-    description: "A casino site I built as a take home assessment for a company I applied for, no feed back yet 🥲, but I found it worthy to be here because of the time and effort I put in to make this right. It is here I started writing tests,",
+    description:
+      "A casino site I built as a take home assessment for a company I applied for, no feed back yet 🥲, but I found it worthy to be here because of the time and effort I put in to make this right. It is here I started writing tests,",
     url: "https://casino-brand.vercel.app/",
     tabValues: ["favorites", "frontend"],
     images: [
@@ -310,7 +316,7 @@ const ProjectData: Project[] = [
         label: "PWA",
         bgColor: "purple",
         textColor: "#fff",
-      }
+      },
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/casino_brand",
@@ -319,7 +325,8 @@ const ProjectData: Project[] = [
   {
     id: "7",
     name: "My Vue app collection",
-    description: "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
+    description:
+      "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
     url: "https://rash-vue-apps.vercel.app/",
     tabValues: ["frontend"],
     images: [
@@ -343,7 +350,8 @@ const ProjectData: Project[] = [
   {
     id: "8",
     name: "My first portfolio",
-    description: "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
+    description:
+      "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
     url: "https://rashjredmund.github.io/Portfolio/",
     tabValues: ["favorites", "html&css"],
     images: [
@@ -364,12 +372,18 @@ const ProjectData: Project[] = [
         label: "CSS",
         bgColor: "#254bdd",
         textColor: "#fff",
-      }
+      },
+      {
+        id: "3",
+        label: "JavaScript",
+        bgColor: "#efd81d",
+        textColor: "#000",
+      },
     ],
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/Portfolio",
     isPrivateRepo: false,
-  }
+  },
 ];
 
 // CERTIFICATES AND ACHIEVEMENTS
@@ -379,16 +393,18 @@ const CertificateData = [
     id: "1",
     title: "HackerRank JavaScript Developer (Basic)",
     url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
-    previewImg: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-basic-1717359420485.png?alt=media&token=02a68a7f-d819-42e0-a88a-6e6e9ec99561",
+    previewImg:
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-basic-1717359420485.png?alt=media&token=02a68a7f-d819-42e0-a88a-6e6e9ec99561",
     dateArchived: "6/17/2023",
   },
   {
     id: "2",
     title: "HackerRank JavaScript Developer (Intermediate)",
     url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
-    previewImg: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-intermediate-1717359441118.png?alt=media&token=f0d84986-ea75-4a08-b768-5974b0d13c4d",
+    previewImg:
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-intermediate-1717359441118.png?alt=media&token=f0d84986-ea75-4a08-b768-5974b0d13c4d",
     dateArchived: "10/6/2023",
-  }
+  },
 ];
 
 export { SkillData, ExperienceData, ProjectData, CertificateData };

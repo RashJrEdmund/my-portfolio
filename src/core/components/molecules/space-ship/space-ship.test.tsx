@@ -21,7 +21,10 @@ describe("Space - Ship", () => {
 
     expect(ship).toBeInTheDocument();
 
-    expect(ship).toHaveAttribute("alt", "space craft. sky's not even the limit, if we work together");
+    expect(ship).toHaveAttribute(
+      "alt",
+      "space craft. sky's not even the limit, if we work together"
+    );
 
     expect(ship).toHaveAccessibleDescription();
 
@@ -29,8 +32,11 @@ describe("Space - Ship", () => {
 
     fireEvent.click(ship);
 
-    waitFor(() => {
-      expect(ship).toHaveAccessibleDescription("Click to stop engine");
-    }, { timeout: 50 });
+    waitFor(
+      () => {
+        expect(ship).toHaveAccessibleDescription("Click to stop engine");
+      },
+      { timeout: 50 }
+    );
   });
 });

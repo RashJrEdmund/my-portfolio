@@ -16,7 +16,7 @@ describe("Landing page | Coding Section", () => {
     expect(img).toHaveAttribute("alt", "my git map");
   });
 
-  it("Should Render \"I literally code every single day\"", () => {
+  it('Should Render "I literally code every single day"', () => {
     const { getByTestId } = render(<Coding />);
 
     const p = getByTestId("i-code-text");

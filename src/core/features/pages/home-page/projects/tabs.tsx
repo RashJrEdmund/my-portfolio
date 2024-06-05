@@ -4,7 +4,10 @@ import Link from "next/link";
 import { Suspense, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ProjectsShimmer, ProjectsContainer } from "./card-components/project-container";
+import {
+  ProjectsShimmer,
+  ProjectsContainer,
+} from "./card-components/project-container";
 
 import { cn } from "@/lib/utils";
 import { type TabValues, ArrTabValues } from "../api/interface";
@@ -12,8 +15,8 @@ import { type TabValues, ArrTabValues } from "../api/interface";
 interface TabProjectData {
   tabs: {
     text: string;
-    tabValue: TabValues,
-  }[],
+    tabValue: TabValues;
+  }[];
   tabContent: {
     tabValue: TabValues;
   }[];
@@ -43,7 +46,7 @@ const TabListData: TabProjectData["tabs"] = [
   {
     text: "All",
     tabValue: "all",
-  }
+  },
 ];
 
 const TabContentData: TabProjectData["tabContent"] = [
@@ -64,7 +67,7 @@ const TabContentData: TabProjectData["tabContent"] = [
   },
   {
     tabValue: "all",
-  }
+  },
 ];
 
 function ProjectTabs() {
@@ -94,7 +97,9 @@ function ProjectTabs() {
           <TabsTrigger
             value={tabValue}
             key={tabValue}
-            className={cn("px-3 py-2 md:px-8 md:py-4 inline-block bg-app-dark-200")}
+            className={cn(
+              "px-3 py-2 md:px-8 md:py-4 inline-block bg-app-dark-200"
+            )}
           >
             {text}
           </TabsTrigger>
@@ -103,24 +108,20 @@ function ProjectTabs() {
       </TabsList>
 
       <div className="w-full min-h-[min(50vh,_600px)]">
-        {
-          TabContentData.map(({ tabValue }) => (
-            <TabsContent
-              value={tabValue}
-              key={tabValue}
-              className="w-full flex flex-col items-center justify-center md:grid md:grid-auto-fill-400 gap-4 gap-y-6 md:gap-y-14"
-            >
-              <Suspense fallback={<ProjectsShimmer />}>
-                <ProjectsContainer tabValue={tabValue} />
-              </Suspense>
-            </TabsContent>
-          ))
-        }
+        {TabContentData.map(({ tabValue }) => (
+          <TabsContent
+            value={tabValue}
+            key={tabValue}
+            className="w-full flex flex-col items-center justify-center md:grid md:grid-auto-fill-400 gap-4 gap-y-6 md:gap-y-14"
+          >
+            <Suspense fallback={<ProjectsShimmer />}>
+              <ProjectsContainer tabValue={tabValue} />
+            </Suspense>
+          </TabsContent>
+        ))}
       </div>
     </Tabs>
   );
-};
+}
 
-export {
-  ProjectTabs
-};
+export { ProjectTabs };

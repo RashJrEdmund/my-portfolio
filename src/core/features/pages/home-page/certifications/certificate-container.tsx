@@ -26,47 +26,43 @@ async function CertificateContainer() {
 
   return (
     <>
-      {
-        Certificates.map((cert) => (
-          <figure key={cert.id} className="w-full max-w-[600px] 2xl:min-w-[400px] bg-app-dark-700 p-4 py-7">
-            <Image
-              src={cert.previewImg}
-              alt="certificate"
-              height={400}
-              width={400}
-              className="w-full"
-            />
+      {Certificates.map((cert) => (
+        <figure
+          key={cert.id}
+          className="w-full max-w-[600px] 2xl:min-w-[400px] bg-app-dark-700 p-4 py-7"
+        >
+          <Image
+            src={cert.previewImg}
+            alt="certificate"
+            height={400}
+            width={400}
+            className="w-full"
+          />
 
-            <figcaption className="font-semibold text-[1.3rem] mt-3">
-              {cert.title}
-            </figcaption>
+          <figcaption className="font-semibold text-[1.3rem] mt-3">
+            {cert.title}
+          </figcaption>
 
-            <div className="w-full flex items-end justify-between gap-3 mt-3">
-              <div className="w-full flex flex-col items-start">
-                <h4 className="font-light">Date Achieved</h4>
+          <div className="w-full flex items-end justify-between gap-3 mt-3">
+            <div className="w-full flex flex-col items-start">
+              <h4 className="font-light">Date Achieved</h4>
 
-                <p>
-                  {new Date(cert.dateArchived).toDateString()}
-                </p>
-              </div>
-
-              <Link
-                href={cert.url}
-                target="_blank"
-                className="text-app-blue-500 text-nowrap"
-              >
-                vew cert
-                <FollowLinkSvg className="text-red-500 ml-2" />
-              </Link>
+              <p>{new Date(cert.dateArchived).toDateString()}</p>
             </div>
-          </figure>
-        ))
-      }
+
+            <Link
+              href={cert.url}
+              target="_blank"
+              className="text-app-blue-500 text-nowrap"
+            >
+              vew cert
+              <FollowLinkSvg className="text-red-500 ml-2" />
+            </Link>
+          </div>
+        </figure>
+      ))}
     </>
   );
 }
 
-export {
-  CertificateShimmer,
-  CertificateContainer,
-};
+export { CertificateShimmer, CertificateContainer };

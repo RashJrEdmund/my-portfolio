@@ -1,5 +1,10 @@
 import { waitAndResolve } from "@/lib/utils";
-import { CertificateData, ExperienceData, ProjectData, SkillData } from "./dummy-data";
+import {
+  CertificateData,
+  ExperienceData,
+  ProjectData,
+  SkillData,
+} from "./dummy-data";
 import { type TabValues } from "./interface";
 
 const getSkills = () => {

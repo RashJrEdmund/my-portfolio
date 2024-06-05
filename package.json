@@ -18,7 +18,8 @@
     "lint": "next lint",
     "test": "npx yarn jest --silent --coverage",
     "test:watch": "jest --watch --silent --coverage",
-    "format": "npx prettier --config .prettierrc.json -w ./src",
+    "cy:open": "npx cypress open",
+    "format": "npx prettier --config .prettierrc.json -w ./cypress",
     "format:check": "npx prettier --config ./.prettierrc.json --check ./src",
     "prepare": "npx husky install",
     "pre-commit": "npx lint-staged"
@@ -52,6 +53,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cypress": "^13.11.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "husky": "^9.0.11",
