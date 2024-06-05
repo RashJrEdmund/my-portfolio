@@ -39,6 +39,6 @@
 /**
  * -- This is a parent command --
  */
-Cypress.Commands.add("get", (testId) => {
-  return cy.get(`[data-testid=${testId}]`);
-});
+// Cypress.Commands.add("get", (testId) => {
+//   return cy.get(`[data-testid=${testId}]`);
+// });

@@ -31,8 +31,7 @@ describe("Home Page e2e", () => {
     cy.contains(/And do my best to gain mastery over everything I do/);
   });
 
-  it.only("NavBar | Portfolio link should be accessible", () => {
-    cy.get("[data-testid=email-link]").click();
-
-  });
+  // it("NavBar | Portfolio link should be accessible", () => {
+  //   cy.get("[data-testid=email-link]").click();
+  // });
 });
