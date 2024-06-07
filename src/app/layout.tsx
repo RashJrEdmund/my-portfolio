@@ -7,7 +7,7 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 const appDescription =
-  "Lahfen Orashus' PWA Portfolio site, built with, TypeScript, NextJs (App Router & src directory), NestJs, MongoDb, and Jest testing library. A full stack application";
+  "Orashus' (Rash's) fullstack PWA Portfolio site, built to showcase my skills so I can get hired and paid to work. It is built with TypeScript, NextJs (App Router & src directory), NestJs, MongoDb, Jest testing library, and Cypress";
 
 export const metadata: Metadata = {
   title: {
