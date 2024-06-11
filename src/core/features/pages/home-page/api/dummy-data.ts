@@ -37,7 +37,7 @@ const ExperienceData: Experience[] = [
     orgLogo: "/org-logos/afta-wallet.jpeg",
     role: "Front End Developer",
     achievements: [
-      "Consumed APIs, and managed an active ADMIN dash board",
+      "Consumed APIs, and managed an active ADMIN dashboard",
       "Collaborated with a team of developers in building good user interfaces",
       "Worked and reported remotely",
     ],

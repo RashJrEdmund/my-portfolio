@@ -19,11 +19,11 @@ function Banner() {
             className="font-bold text-[1.6rem] md:text-[3.5rem] xl:text-[4.5rem] min-h-[50px] text-wrap xl:text-nowrap"
             writerOptions={{
               words: [
-                "TypeScript Enthusiast",
+                "TypeScript Developer",
                 "MERN Stack",
                 "NextJs Fanboy",
                 "Full Stack Developer",
-                "Back End Developer",
+                "Learning Python",
                 "Front End Developer",
               ],
               loop: 1,
@@ -40,7 +40,7 @@ function Banner() {
             I&apos;m a detail-oriented, skilled software developer with a
             perfect understanding of TypeScript and JavaScript, very basic
             knowledge of Java, and expertise in frameworks like NextJs, React,
-            NestJs, and Express. I&apos;m a quick learner and can collaborate
+            NestJs, and Express. I&apos;m a quick learner (currently learning Python), and can collaborate
             closely with clients to create efficient, scalable, and
             user-friendly solutions that solve real-world problems.
           </p>
