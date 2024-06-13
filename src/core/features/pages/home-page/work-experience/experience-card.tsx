@@ -50,7 +50,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             <h2 className="font-semibold text-[1.2rem] md:text-[1.5rem] text-nowrap">
               {experience.organization}
 
-              <Link href="/" target="_blank" className="w-fit ml-4">
+              <Link href={experience.orgLink} target="_blank" className="w-fit ml-4">
                 <FollowLinkSvg />
               </Link>
             </h2>
