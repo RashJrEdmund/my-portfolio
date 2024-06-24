@@ -41,7 +41,7 @@ function BannerCTA() {
         className="outline-0"
         data-testid="download-resume"
       >
-        <Icon icon="arrowDown" size={20} className="inline" /> Download Resume
+        <Icon icon="arrowDown" size={20} className="inline" /> View Resume
       </Text>
     </div>
   );
