@@ -216,6 +216,45 @@ const ProjectData: Project[] = [
   },
   {
     id: "4",
+    name: "R - Devs todo app",
+    description: "A full stack todo application built by I and my team in preparation of a regional hackathon. The purpose of this project was to help everyone understand how to work with the rest of the team. Both the front-end and back-end of this mono-repo were uploaded and deployed on vercel. It from here I learned to use the vercel CLI in for deployment",
+    url: "https://r-dev-to-do.vercel.app/",
+    tabValues: ["favorites", "fullstack"],
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todos-home-1719985712928.png?alt=media&token=6e32f447-83e6-41a6-8987-a366e8d1b866",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-meet-team-section-1719985706038.png?alt=media&token=80cdfe19-2432-45f2-bdea-cfda82494888",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-home-loading-1719985575051.png?alt=media&token=c811745a-9017-45fe-852e-28da0fa0af73",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-todos-1719985578755.png?alt=media&token=36b9922a-7381-4df5-8114-104cc35e3d58",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-create-todo-1719985572947.png?alt=media&token=d25d7fd0-f22d-45e9-9bcd-4a14c3255419",
+      "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todos-delete-todo-1719987775811.png?alt=media&token=8e3fa6d9-29b6-45c3-90b2-e0bff942815f",
+    ],
+    logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
+    tags: [
+      {
+        id: "1",
+        label: "NextJs",
+        bgColor: "#000",
+        textColor: "#fff",
+      },
+      {
+        id: "2",
+        label: "Express",
+        bgColor: "#fff",
+        textColor: "#000",
+      },
+      {
+        id: "3",
+        label: "MongoDb",
+        bgColor: "green",
+        textColor: "#fff",
+      }
+    ],
+    dateCreated: "",
+    gitHubRepo: "https://github.com/solonkonora/To-Do",
+    isPrivateRepo: false,
+  },
+  {
+    id: "5",
     name: "Mini - Link",
     description:
       "A url shortener I built with svelteKit (TS), Tailwind, SASS (for the table, I didn't wanna write Tailwind for that), Fastify (for auth), Express (for redirects) and shortening, MongoDb. It should've been among my favorite list but render.com shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 At times you'll have to refresh and wait till the service reboots.",
@@ -271,7 +310,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "5",
+    id: "6",
     name: "Mini - Link (Auth)",
     description:
       "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express",
@@ -298,7 +337,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "6",
+    id: "7",
     name: "Casino",
     description:
       "A casino site I built as a take home assessment for a company I applied for, no feed back yet 🥲, but I found it worthy to be here because of the time and effort I put in to make this right. It is here I started writing tests,",
@@ -329,7 +368,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "7",
+    id: "8",
     name: "My Vue app collection",
     description:
       "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
@@ -354,7 +393,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "8",
+    id: "9",
     name: "My first portfolio",
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
