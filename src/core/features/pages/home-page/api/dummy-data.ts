@@ -228,7 +228,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-create-todo-1719985572947.png?alt=media&token=d25d7fd0-f22d-45e9-9bcd-4a14c3255419",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todos-delete-todo-1719987775811.png?alt=media&token=8e3fa6d9-29b6-45c3-90b2-e0bff942815f",
     ],
-    logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
+    logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1720025011710.png?alt=media&token=57527cc7-8593-441a-8312-b54bdd3ed42b",
     tags: [
       {
         id: "1",
