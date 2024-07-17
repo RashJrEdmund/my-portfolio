@@ -1,4 +1,5 @@
 import type { Experience, Project, Skill } from "./interface";
+import { getProjectTags } from "./project-tags";
 
 const SkillData: Skill[] = [
   {
@@ -97,26 +98,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-cloud-login-1717418302935.png?alt=media&token=ec2cc4e0-0d5d-4cdc-8932-8336a0a2d32e",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-cloud-logo-1717236660783.png?alt=media&token=1606af2d-dc5d-4ece-af84-24b1cb61fdc8",
-    tags: [
-      {
-        id: "1",
-        label: "NextJs",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "Firebase",
-        bgColor: "orange",
-        textColor: "#fff",
-      },
-      {
-        id: "3",
-        label: "PWA",
-        bgColor: "purple",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["NextJs", "Firebase", "PWA", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/r-cloud",
     isPrivateRepo: true,
@@ -135,26 +117,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-4-1717321825215.png?alt=media&token=2f80e067-13e8-4a0c-8b98-703c36417e44",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-logo-1717321615378.png?alt=media&token=20bc286b-514b-42ff-97da-ddfec670ee6d",
-    tags: [
-      {
-        id: "1",
-        label: "NextJs",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "Openweather API",
-        bgColor: "orange",
-        textColor: "#fff",
-      },
-      {
-        id: "3",
-        label: "IPGeolocation",
-        bgColor: "purple",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["NextJs", "Openweather API", "IPGeolocation", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/krash-weather-app",
     isPrivateRepo: false,
@@ -172,44 +135,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-footer-1717246640388.png?alt=media&token=329ed02e-0429-474e-82ed-04b330b9daab",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
-    tags: [
-      {
-        id: "1",
-        label: "NextJs",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "NestJs",
-        bgColor: "#000",
-        textColor: "purple",
-      },
-      {
-        id: "3",
-        label: "MongoDb",
-        bgColor: "green",
-        textColor: "#fff",
-      },
-      {
-        id: "4",
-        label: "PWA",
-        bgColor: "purple",
-        textColor: "#fff",
-      },
-      {
-        id: "5",
-        label: "Jest",
-        bgColor: "green",
-        textColor: "#000",
-      },
-      {
-        id: "6",
-        label: "Cypress",
-        bgColor: "#fff",
-        textColor: "#000",
-      },
-    ],
+    tags: getProjectTags(["NextJs", "NestJs", "MongoDb", "PWA", "Jest", "Cypress", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/my-portfolio",
     isPrivateRepo: true,
@@ -229,26 +155,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todos-delete-todo-1719987775811.png?alt=media&token=8e3fa6d9-29b6-45c3-90b2-e0bff942815f",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1720025011710.png?alt=media&token=57527cc7-8593-441a-8312-b54bdd3ed42b",
-    tags: [
-      {
-        id: "1",
-        label: "NextJs",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "Express",
-        bgColor: "#fff",
-        textColor: "#000",
-      },
-      {
-        id: "3",
-        label: "MongoDb",
-        bgColor: "green",
-        textColor: "#fff",
-      }
-    ],
+    tags: getProjectTags(["NextJs", "Express", "MongoDb", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/solonkonora/To-Do",
     isPrivateRepo: false,
@@ -267,44 +174,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-login-1717417911665.png?alt=media&token=743815fc-0067-4bb5-ac5b-f1f377635de4",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-logo-1717417885799.png?alt=media&token=b7361c2f-58fb-4444-b05a-e767d0418872",
-    tags: [
-      {
-        id: "1",
-        label: "Svelte",
-        bgColor: "#dd4b25",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "SCSS",
-        bgColor: "#254bdd",
-        textColor: "#fff",
-      },
-      {
-        id: "3",
-        label: "TailwindCss",
-        bgColor: "#254bdd",
-        textColor: "#fff",
-      },
-      {
-        id: "4",
-        label: "Fastify",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "5",
-        label: "Express",
-        bgColor: "#fff",
-        textColor: "#000",
-      },
-      {
-        id: "6",
-        label: "MongoDb",
-        bgColor: "green",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["Svelte", "SCSS", "TailwindCss", "Fastify", "Express", "MongoDb", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/mini_link",
     isPrivateRepo: false,
@@ -318,22 +188,23 @@ const ProjectData: Project[] = [
     tabValues: ["backend"],
     images: [],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-logo-1717417885799.png?alt=media&token=b7361c2f-58fb-4444-b05a-e767d0418872",
-    tags: [
-      {
-        id: "1",
-        label: "Fastify",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "MongoDb",
-        bgColor: "green",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["Fastify", "MongoDb", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/mini-link-auth",
+    isPrivateRepo: false,
+  },
+  {
+    id: "7",
+    name: "API re-starter (Cron Job)",
+    description:
+      "I built this to resolve the issue with Mini link APIs and other backend services I deployed on render. Since Render shuts down a free tier service after 15 minutes of idleness, I built this cron-job to hit all the API's I deployed on Render free tier after every 12mins. This makes sure my backend services on render are always live and active 😇",
+    url: "https://api-re-starter.onrender.com/",
+    tabValues: ["backend"],
+    images: [],
+    logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
+    tags: getProjectTags(["NodeJs", "TypeScript"]),
+    dateCreated: "",
+    gitHubRepo: "https://github.com/RashJrEdmund/api-re-starter",
     isPrivateRepo: false,
   },
   {
@@ -349,20 +220,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Ftestimonials-1717248694238.png?alt=media&token=a2dad75c-04d9-40fa-bc01-a324dcb0367f",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fcasino%20logo-1717248619287.png?alt=media&token=bcadc3b2-2176-4edf-9288-a4099b8bfe15",
-    tags: [
-      {
-        id: "1",
-        label: "NextJs",
-        bgColor: "#000",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "PWA",
-        bgColor: "purple",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["NextJs", "PWA", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/casino_brand",
     isPrivateRepo: false,
@@ -380,14 +238,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fvue-apps-todos-1717414911654.png?alt=media&token=818e33b6-be1b-4de2-82ab-e32497519752",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fvue-apps-logo-1717414885691.png?alt=media&token=94197b80-e154-496f-a398-386faa47128a",
-    tags: [
-      {
-        id: "1",
-        label: "VueJs",
-        bgColor: "green",
-        textColor: "#fff",
-      },
-    ],
+    tags: getProjectTags(["VueJs", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/vue-apps",
     isPrivateRepo: false,
@@ -398,33 +249,14 @@ const ProjectData: Project[] = [
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
     url: "https://rashjredmund.github.io/Portfolio/",
-    tabValues: ["favorites", "html&css"],
+    tabValues: ["favorites", "html&css",],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-banner-1717413269428.png?alt=media&token=2a441828-2f1d-4e8c-9fe2-de918bbf3bf7",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-projects-1717413254475.png?alt=media&token=53171725-2f0a-4097-bbe0-b98f73d42a75",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-footer-1717413247454.png?alt=media&token=b62024e3-735f-447b-a589-8635115a6ffc",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-logo-1717413213488.jpeg?alt=media&token=9b25f06c-6f2b-4bea-9ff5-255ab92fa44d",
-    tags: [
-      {
-        id: "1",
-        label: "HTML",
-        bgColor: "#dd4b25",
-        textColor: "#fff",
-      },
-      {
-        id: "2",
-        label: "CSS",
-        bgColor: "#254bdd",
-        textColor: "#fff",
-      },
-      {
-        id: "3",
-        label: "JavaScript",
-        bgColor: "#efd81d",
-        textColor: "#000",
-      },
-    ],
+    tags: getProjectTags(["HTML", "CSS", "JavaScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/Portfolio",
     isPrivateRepo: false,

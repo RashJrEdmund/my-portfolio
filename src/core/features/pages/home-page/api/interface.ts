@@ -18,9 +18,14 @@ interface Experience {
 
 // PROJECTS
 
-interface ProjectTags {
+type ProjectLabels = "HTML" | "CSS" | "JavaScript" | "NextJs" | "VueJs"
+  | "Svelte" | "Firebase" | "PWA" | "TypeScript" | "Python" | "Java" | "SCSS"
+  | "TailwindCss" | "Openweather API" | "IPGeolocation" | "NestJs" | "Express"
+  | "Fastify" | "NodeJs" | "MongoDb" | "Jest" | "Cypress";
+
+interface ProjectTag {
   id: string;
-  label: string;
+  label: ProjectLabels;
   bgColor: string;
   textColor: string;
 }
@@ -33,7 +38,7 @@ interface Project {
   images: string[];
   logo: string;
   tabValues: TabValues[];
-  tags: ProjectTags[];
+  tags: ProjectTag[];
   dateCreated: string;
   gitHubRepo: string;
   isPrivateRepo: boolean;
@@ -59,5 +64,6 @@ export type {
 
   // Project
   Project,
-  ProjectTags,
+  ProjectTag,
+  ProjectLabels,
 };
