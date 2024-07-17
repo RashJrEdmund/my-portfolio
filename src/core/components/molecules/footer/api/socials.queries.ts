@@ -41,7 +41,7 @@ const SocialAccounts: SocialHandle[] = [
 ];
 
 const getSocials = () => {
-  return waitAndResolve(SocialAccounts, 4000);
+  return waitAndResolve(SocialAccounts, 400);
 };
 
 export { getSocials };
