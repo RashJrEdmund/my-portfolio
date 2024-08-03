@@ -164,7 +164,7 @@ const ProjectData: Project[] = [
     id: "5",
     name: "Mini - Link",
     description:
-      "A url shortener I built with svelteKit (TS), Tailwind, SASS (for the table, I didn't wanna write Tailwind for that), Fastify (for auth), Express (for redirects) and shortening, MongoDb. It should've been among my favorite list but render.com shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 At times you'll have to refresh and wait till the service reboots.",
+      "A url shortener I built with svelteKit (TS), Tailwind, SASS for the table, Fastify for auth, Express for redirects & shortening, and MongoDb. I deployed the API's on render.com but render shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 As of now, I have a cron job setup that hits the API every 12 mins, in hopes to keep it alive.",
     url: "https://mini-link.vercel.app/",
     tabValues: ["fullstack"],
     images: [
@@ -183,7 +183,7 @@ const ProjectData: Project[] = [
     id: "6",
     name: "Mini - Link (Auth)",
     description:
-      "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express",
+      "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express, I made this separation to get some level of experience in building micro-services",
     url: "https://mini-link-auth.onrender.com/",
     tabValues: ["backend"],
     images: [],
