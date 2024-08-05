@@ -8,7 +8,7 @@ function Services() {
       <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-h flex flex-col items-center justify-center gap-14">
         <div className="w-full flex flex-col sm:flex-row items-start justify-between gap-4">
           <h3 className="font-bold text-[1.6rem] sm:text-[2rem] md:text-[3rem] max-w-[500px] leading-none">
-            1.8+ years coding experience.
+            2+ years coding experience.
           </h3>
 
           <div className="w-full max-w-[660px]">
