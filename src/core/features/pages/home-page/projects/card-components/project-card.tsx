@@ -66,7 +66,7 @@ function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <div className="group relative w-full max-w-[550px] h-fit md:min-h-[575px] mx-auto bg-app-dark-500 border-b-[5px] border-b-app-blue-500 flex flex-col justify-between gap-4 p-4 rounded-none">
+    <div className="group relative w-full max-w-[550px] h-fit md:min-h-[575px] mx-auto bg-app-dark-500 border-b-[5px] border-b-app-blue-500 flex flex-col justify-between gap-4 p-4 md:duration-300 md:hover:translate-y-[-10px]">
       <div className="flex flex-col gap-4 w-full h-fit">
         {showTechStack ? (
           <div
@@ -125,7 +125,7 @@ function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
 
-        <p className="font-normal leading-6 min-h-[100px]">
+        <p className="font-normal text-sm sm:text-base leading-6 min-h-[100px]">
           {project.description}
         </p>
       </div>

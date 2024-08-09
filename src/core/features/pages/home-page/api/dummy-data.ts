@@ -109,7 +109,7 @@ const ProjectData: Project[] = [
     description:
       "A simple yet beautiful weather APP, It is one among the many projects I built when I started out with NextJs, It has automatic geo-weather detection, (making use of Ipgeolocation), search features, and a 5 day weather forecast with each day having 8 forecasts with a 3 hour spacing",
     url: "https://krash-weather.vercel.app/",
-    tabValues: ["favorites", "frontend"],
+    tabValues: ["frontend"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-1-1717321486868.png?alt=media&token=bc0b75a1-c341-4882-800d-5748413837dd",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-2-1717321494011.png?alt=media&token=f61ed8bf-3d8d-4c67-a5bf-418239d2047e",
@@ -128,7 +128,7 @@ const ProjectData: Project[] = [
     description:
       'My portfolio and blog site, designed with figma, and built to show case my abilities, so I can get hired and get paid to work 🙂. Don\'t forget to play with the mini space-ship parked right above the "Experience section"',
     url: "https://orashus.vercel.app/",
-    tabValues: ["favorites", "fullstack"],
+    tabValues: ["fullstack"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-banner-1-1717246054898.png?alt=media&token=684c592c-04e5-46fe-b9ce-cc3d7bda3b54",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fexperience-section-1717246286069.png?alt=media&token=dd6a12e0-c2ff-473c-a75d-5f8a4a289a7b",
@@ -145,7 +145,7 @@ const ProjectData: Project[] = [
     name: "R - Devs todo app",
     description: "A full stack todo application built by I and my team in preparation of a regional hackathon. The purpose of this project was to help everyone understand how to work with the rest of the team. Both the front-end and back-end of this mono-repo were uploaded and deployed on vercel. It from here I learned to use the vercel CLI in for deployment",
     url: "https://r-dev-to-do.vercel.app/",
-    tabValues: ["favorites", "fullstack"],
+    tabValues: ["fullstack"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todos-home-1719985712928.png?alt=media&token=6e32f447-83e6-41a6-8987-a366e8d1b866",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fr-devs-todo-meet-team-section-1719985706038.png?alt=media&token=80cdfe19-2432-45f2-bdea-cfda82494888",
@@ -213,7 +213,7 @@ const ProjectData: Project[] = [
     description:
       "A casino site I built as a take home assessment for a company I applied for, no feed back yet 🥲, but I found it worthy to be here because of the time and effort I put in to make this right. It is here I started writing tests,",
     url: "https://casino-brand.vercel.app/",
-    tabValues: ["favorites", "frontend"],
+    tabValues: ["frontend"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fcasino%20landing-1717248848762.png?alt=media&token=095263e6-4610-413f-be47-4e84edbfbea9",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Ftop-games-1717248697308.png?alt=media&token=53a6b60d-0c5c-4257-bf66-ffe76724b0c2",
@@ -249,7 +249,7 @@ const ProjectData: Project[] = [
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
     url: "https://rashjredmund.github.io/Portfolio/",
-    tabValues: ["favorites", "html&css",],
+    tabValues: ["html&css"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-banner-1717413269428.png?alt=media&token=2a441828-2f1d-4e8c-9fe2-de918bbf3bf7",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-projects-1717413254475.png?alt=media&token=53171725-2f0a-4097-bbe0-b98f73d42a75",
