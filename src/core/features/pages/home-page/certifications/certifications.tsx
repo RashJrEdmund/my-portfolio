@@ -3,6 +3,7 @@ import {
   CertificateContainer,
   CertificateShimmer,
 } from "./certificate-container";
+import { SectionHeader } from "@/components/ui/section-header";
 
 function Certifications() {
   return (
@@ -11,9 +12,9 @@ function Certifications() {
       className="w-full max-w-app-dynamic-max-w h-fit flex items-center justify-center"
     >
       <div className="w-full min-h-app-section-min-h flex flex-col items-center justify-center pt-8 pb-12 gap-11">
-        <h3 className="font-semibold text-[1.3rem] md:text-[2rem] w-fit mx-auto">
+        <SectionHeader>
           Certificates and achievements
-        </h3>
+        </SectionHeader>
 
         <div className="w-full mx-auto flex flex-col md:flex-row xl:flex-wrap items-center justify-center gap-4 md:gap-8 gap-y-6 mt-8">
           <Suspense fallback={<CertificateShimmer />}>

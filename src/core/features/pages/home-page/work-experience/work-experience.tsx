@@ -2,6 +2,7 @@ import { SpaceShip } from "@/components/molecules/space-ship/space-ship";
 import { getExperiences } from "../api/queries";
 import { Suspense } from "react";
 import { ExperienceCard, ExperienceShimmer } from "./experience-card";
+import { SectionHeader } from "@/components/ui/section-header";
 
 async function ExperienceList() {
   const Experiences = await getExperiences();
@@ -23,9 +24,9 @@ function WorkExperience() {
       <div className="w-full max-w-app-dynamic-max-w mx-auto min-h-app-section-min-h pb-17">
         <SpaceShip />
 
-        <h3 className="font-semibold text-[1.3rem] md:text-[2rem] w-fit mx-auto mb-11">
+        <SectionHeader className="mb-11">
           Work Experience
-        </h3>
+        </SectionHeader>
 
         <div className="w-full flex flex-wrap gap-6 md:gap-8 items-start justify-center">
           <Suspense fallback={<ExperienceShimmer />}>

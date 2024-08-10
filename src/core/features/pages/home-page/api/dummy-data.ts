@@ -1,4 +1,4 @@
-import type { Experience, Project, Skill } from "./interface";
+import type { Experience, Project, Skill, Tool } from "./interface";
 import { getProjectTags } from "./project-tags";
 
 const SkillData: Skill[] = [
@@ -79,6 +79,36 @@ const ExperienceData: Experience[] = [
   },
 ];
 
+// TOOLS AND LANGUAGES
+
+const ToolsAndLanguageData: Tool[] = [
+  {
+    id: "1",
+    img_url: "/lang-logos/ts-logo.png",
+    name: "TypeScript",
+  },
+  {
+    id: "2",
+    img_url: "/lang-logos/js-logo.png",
+    name: "JavaScript",
+  },
+  {
+    id: "3",
+    img_url: "/lang-logos/python-logo.jpeg",
+    name: "Python",
+  },
+  {
+    id: "4",
+    img_url: "/lang-logos/java-logo.png",
+    name: "Java",
+  },
+  {
+    id: "5",
+    img_url: "/lang-logos/rust-logo.jpeg",
+    name: "Rust",
+  }
+]
+
 // PROJECTS
 
 const ProjectData: Project[] = [
@@ -135,7 +165,7 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-footer-1717246640388.png?alt=media&token=329ed02e-0429-474e-82ed-04b330b9daab",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
-    tags: getProjectTags(["NextJs", "NestJs", "MongoDb", "PWA", "Jest", "Cypress", "TypeScript"]),
+    tags: getProjectTags(["NextJs", /* "NestJs", "MongoDb", */ "PWA", "Jest", "Cypress", "TypeScript"]),
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/my-portfolio",
     isPrivateRepo: true,
@@ -284,4 +314,10 @@ const CertificateData = [
   },
 ];
 
-export { SkillData, ExperienceData, ProjectData, CertificateData };
+export {
+  SkillData,
+  ExperienceData,
+  ToolsAndLanguageData,
+  ProjectData,
+  CertificateData
+};

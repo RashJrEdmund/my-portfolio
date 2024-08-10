@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
-import { getSkills } from "../api/queries";
-import type { Skill } from "../api/interface";
+import { getToolAndLanguages } from "../api/queries";
+import type { Tool } from "../api/interface";
 import Image from "next/image";
 import { ServiceSVGObj } from "@/components/ui/svg";
 
@@ -24,49 +24,47 @@ function ToolsShimmer() {
 }
 
 function ToolComponent({
-  skill: { id, label, description },
+  tool: { id, img_url, name },
   i,
 }: {
-  skill: Skill;
+  tool: Tool;
   i: number;
 }) {
   const adder = i % 2 === 0 ? 1 : 2;
 
   const src =
     ServiceSVGObj[
-      ("serviceSvg" + adder) as unknown as keyof typeof ServiceSVGObj
+    ("serviceSvg" + adder) as unknown as keyof typeof ServiceSVGObj
     ];
 
   return (
-    <div className="w-[100%] sm:w-[95%] xl:max-w-[350px] h-fit min-h-[260px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
+    <div className="w-[100%] sm:w-[95%] max-w-[200px] h-fit min-h-[160px] bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
       <Image
-        src={src}
+        src={img_url}
         alt="service icon"
-        width={50}
-        height={50}
-        className="w-[50px] h-[50px]"
+        width={100}
+        height={100}
+        className="size-[100px]"
         draggable={false}
         data-test-src={src}
       />
 
-      <h4 className="font-semibold text-[1.2rem]">{label}</h4>
-
-      <p className="font-normal leading-6">{description}</p>
+      <h4 className="font-semibold text-[1.2rem]">{name}</h4>
     </div>
   );
 }
 
 async function ToolList() {
-  const skillData = await getSkills();
+  const tools = await getToolAndLanguages();
 
   return (
     <>
-      {skillData.length ? (
-        skillData.map((skill, i) => (
-          <ToolComponent key={skill.id} skill={skill} i={i} />
+      {tools.length ? (
+        tools.map((tool, i) => (
+          <ToolComponent key={tool.id} tool={tool} i={i} />
         ))
       ) : (
-        <div>Rash Has Not Added Any Skill Yet!</div>
+        <div>Rash Has Not Added Any Tools Yet!</div>
       )}
     </>
   );

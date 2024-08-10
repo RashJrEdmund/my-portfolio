@@ -16,13 +16,11 @@ export default function HomePage() {
 
         <WorkExperience />
 
-        {/* <LanguagesAndTools /> */}
+        <LanguagesAndTools />
 
         <Projects />
 
         <Certifications />
-
-        programming languages
       </div>
 
       <Coding />

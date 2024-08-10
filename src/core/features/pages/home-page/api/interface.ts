@@ -4,6 +4,12 @@ interface Skill {
   description: string;
 }
 
+interface Tool {
+  id: string;
+  img_url: string;
+  name: string;
+}
+
 interface Experience {
   id: string;
   organization: string;
@@ -59,6 +65,7 @@ export { ArrTabValues };
 
 export type {
   Skill,
+  Tool,
   Experience,
   TabValues,
 
