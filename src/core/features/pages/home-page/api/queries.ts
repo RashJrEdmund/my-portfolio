@@ -16,11 +16,9 @@ const getExperiences = () => {
 };
 
 const getProjects = async (tabValue: TabValues) => {
-  const projects = await waitAndResolve(ProjectData, 200);
+  if (tabValue === "all") return ProjectData;
 
-  if (tabValue === "all") return projects;
-
-  return projects.filter((p) => p.tabValues.includes(tabValue));
+  return ProjectData.filter((p) => p.tabValues.includes(tabValue));
 };
 
 const getCertificates = () => {

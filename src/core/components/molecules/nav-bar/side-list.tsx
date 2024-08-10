@@ -27,6 +27,10 @@ const SIDE_LIST = [
         subHref: "#work-experience",
       },
       {
+        subLabel: "Tools",
+        subHref: "#tools",
+      },
+      {
         subLabel: "Projects",
         subHref: "#projects",
       },

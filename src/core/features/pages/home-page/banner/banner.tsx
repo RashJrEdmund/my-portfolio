@@ -1,6 +1,7 @@
 import { DynamicText } from "@/components/ui/dynamic-text";
 import { BannerCTA } from "./banner-cta";
 import Image from "next/image";
+import { SquareTerminal, Terminal } from "lucide-react";
 
 function Banner() {
   return (
@@ -11,25 +12,24 @@ function Banner() {
       <div className="w-full min-h-[60vh] md:min-h-app-section-min-h flex flex-col-reverse gap-2 sm:gap-4 md:flex-row items-center justify-center">
         <div className="w-full flex flex-col gap-4 md:gap-8 items-start justify-center">
           <h1 className="text-app-blue-500 font-semibold text-[1rem] md:text-[2rem]">
-            Hello, I&apos;m Orashus {JSON.stringify("{ }").slice(1, -1)}, Rash
-            for short.
+            Hello, I&apos;m Orashus, Rash
+            for short <SquareTerminal className="inline size-4 md:size-8" />
           </h1>
 
           <DynamicText
             className="font-bold text-[1.6rem] md:text-[3.5rem] xl:text-[4.5rem] min-h-[50px] text-wrap xl:text-nowrap"
             writerOptions={{
               words: [
-                "TypeScript Developer",
+                "TypeScript Dev",
                 "MERN Stack",
                 "NextJs Fanboy",
-                "Rust Enthusiast",
-                "Learning Python",
-                "Front End Developer",
+                "Learning Rust",
+                "Full stack Developer",
               ],
               loop: 1,
               typeSpeed: 100,
               cursorColor: "var(--app-blue-500)",
-              cursorStyle: "{}",
+              cursorStyle: <Terminal className="inline ml-1 size-[1.6rem] md:size-[3.5rem] xl:size-[4.5rem]" />,
             }}
           />
 

@@ -3,6 +3,7 @@ import { Certifications } from "./certifications/certifications";
 import { Coding } from "./coding/coding";
 import { Projects } from "./projects/projects";
 import { Services } from "./services/services";
+import { LanguagesAndTools } from "./tools/languages-and-tools";
 import { WorkExperience } from "./work-experience/work-experience";
 
 export default function HomePage() {
@@ -15,9 +16,13 @@ export default function HomePage() {
 
         <WorkExperience />
 
+        {/* <LanguagesAndTools /> */}
+
         <Projects />
 
         <Certifications />
+
+        programming languages
       </div>
 
       <Coding />
