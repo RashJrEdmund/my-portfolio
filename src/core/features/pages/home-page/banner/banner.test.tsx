@@ -24,7 +24,7 @@ describe("Landing page | Banner section", () => {
 
     expect(header).toBeInTheDocument();
 
-    expect(header).toHaveTextContent("Hello, I'm Orashus { }, Rash for short.");
+    expect(header).toHaveTextContent("Hello, I'm Orashus, Rash for short");
   });
 
   it('Should have a "I interned at a fin-tech startup (Aftawallet) as a front-end developer for a month" message', () => {

@@ -7,9 +7,9 @@ describe("Landing page | Coding Section", () => {
   });
 
   it("Should Render Image", () => {
-    const { getByRole } = render(<Coding />);
+    const { getAllByRole } = render(<Coding />);
 
-    const img = getByRole("img");
+    const [img] = getAllByRole("img");
 
     expect(img).toBeInTheDocument();
 

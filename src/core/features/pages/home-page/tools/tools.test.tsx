@@ -6,10 +6,10 @@ describe("Landing page | Service section", () => {
   it('Should render the <ToolComponent skill={{ id: "1", label: "test-label", description: "test description" }} />  message', () => {
     const { getByRole } = render(
       <ToolComponent
-        skill={{
+        tool={{
           id: "1",
-          label: "test-label",
-          description: "test description",
+          img_url: "/lang-logos/rust-logo.jpeg",
+          name: "Language",
         }}
         i={0}
       />
@@ -17,14 +17,14 @@ describe("Landing page | Service section", () => {
 
     const header = getByRole("heading", { level: 4 });
 
-    const orgLogo = getByRole("img");
+    const langLogo = getByRole("img");
 
-    [header, orgLogo].forEach((tag) => {
+    [header, langLogo].forEach((tag) => {
       expect(tag).toBeInTheDocument();
     });
 
-    expect(header).toHaveTextContent("test-label");
+    expect(header).toHaveTextContent("Language");
 
-    expect(orgLogo).toHaveAttribute("src");
+    expect(langLogo).toHaveAttribute("src");
   });
 });
