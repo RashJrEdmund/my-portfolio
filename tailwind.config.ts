@@ -126,6 +126,12 @@ const config = {
 
       const newUtilities = {
         // GRID
+        ".grid-auto-fill-150": {
+          "grid-template-columns": "repeat(auto-fill, 150px)",
+        },
+        ".grid-auto-fill-200": {
+          "grid-template-columns": "repeat(auto-fill, 200px)",
+        },
         ".grid-auto-fill-350": {
           "grid-template-columns": "repeat(auto-fill, minmax(350px, 1fr))",
         },

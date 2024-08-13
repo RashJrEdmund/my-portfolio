@@ -11,7 +11,7 @@ function LanguagesAndTools() {
           Languages
         </SectionHeader>
 
-        <div className="w-full flex flex-wrap items-center justify-start gap-4 gap-y-6 xl:gap-y-14">
+        <div className="w-full max-w-[850px] grid grid-auto-fill-150 md:grid-auto-fill-200 items-center justify-center gap-4 gap-y-6 xl:gap-y-14">
           <Suspense fallback={<ToolsShimmer />}>
             <ToolList />
           </Suspense>

@@ -38,13 +38,13 @@ function SkillComponent({
     ];
 
   return (
-    <div className="w-[100%] sm:w-[95%] xl:max-w-[350px] h-fit min-h-[260px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
+    <div className="w-full sm:w-[95%] max-w-[320px] h-fit min-h-[260px] mx-auto bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
       <Image
         src={src}
         alt="service icon"
         width={50}
         height={50}
-        className="w-[50px] h-[50px]"
+        className="size-[50px]"
         draggable={false}
         data-test-src={src}
       />

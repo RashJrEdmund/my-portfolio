@@ -38,7 +38,7 @@ function ToolComponent({
     ];
 
   return (
-    <div className="w-[100%] sm:w-[95%] max-w-[200px] h-fit min-h-[160px] bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
+    <div className="w-full mx-auto h-fit min-h-[160px] bg-app-dark-200 border-b-[5px] border-b-app-blue-500 flex flex-col gap-4 p-4 rounded-none">
       <Image
         src={img_url}
         alt="service icon"
