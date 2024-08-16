@@ -8,15 +8,24 @@ describe("Home Page e2e", () => {
 
     cy.contains(/typescript enthusiast/i);
 
-    cy.contains(/I'm a detail oriented, skilled software developer with a perfect understanding of TypeScript and JavaScript, very basic knowledge of Java, and expertise in frameworks like NextJs, React, NestJs, and Express/i);
+    cy.contains(
+      /I'm a detail oriented, skilled software developer with a perfect understanding of TypeScript and JavaScript, very basic knowledge of Java, and expertise in frameworks like NextJs, React, NestJs, and Express/i
+    );
 
     cy.contains(/1.7\+ years coding experience./i);
 
-    cy.contains(/Discover the best services I offer, designed to ensure the success of your project./i);
+    cy.contains(
+      /Discover the best services I offer, designed to ensure the success of your project./i
+    );
 
     cy.contains(/Skill Set/i);
 
-    ["Attention to details", "Teachable", "Logical Approach", "Creative Ability"].forEach((skill) => {
+    [
+      "Attention to details",
+      "Teachable",
+      "Logical Approach",
+      "Creative Ability",
+    ].forEach((skill) => {
       cy.contains(skill);
     });
 
