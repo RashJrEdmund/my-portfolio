@@ -37,12 +37,11 @@ function Banner() {
             className="max-w-[600px] text-app-text-200 font-light sm:font-normal md:text-[1.2rem]"
             data-testid="aftawallet-internship-heading"
           >
-            I&apos;m a detail-oriented, skilled software developer with a
-            perfect understanding of TypeScript and JavaScript. I also code with Python (Flask), and have basic
-            knowledge of Java, and expertise in frameworks like NextJs, React,
-            NestJs, and Express. I&apos;m a quick learner, and can collaborate
-            closely with clients to create efficient, scalable, and
-            user-friendly solutions that solve real-world problems.
+            I am a detail-oriented, skilled software developer with a perfect understanding
+            of TypeScript and JavaScript. I also code with Python (Flask), and have basic knowledge of Java,
+            and expertise in frameworks like NextJs, React, NestJs, and Express. I&apos;m a quick learner,
+            and can collaborate closely with a team and or clients to create efficient, scalable,
+            and user-friendly solutions that solve real-world problems.
           </p>
 
           <BannerCTA />

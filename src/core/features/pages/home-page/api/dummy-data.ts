@@ -312,6 +312,14 @@ const CertificateData = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2FHackerRank-cert-intermediate-1717359441118.png?alt=media&token=f0d84986-ea75-4a08-b768-5974b0d13c4d",
     dateArchived: "10/6/2023",
   },
+  {
+    id: "3",
+    title: "ALX AICE (AI Career Essentials)",
+    url: "alx-aice-completion-badge-v2.gif",
+    previewImg:
+      "/alx-aice-completion-badge-v2.gif",
+    dateArchived: "8/18/2024",
+  },
 ];
 
 export {
