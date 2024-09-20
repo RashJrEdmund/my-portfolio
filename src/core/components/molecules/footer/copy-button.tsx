@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/primitives/icon";
+import { Tooltip } from "@/components/ui/tooltip";
 import { toast } from "sonner";
 
 /**
@@ -14,12 +15,14 @@ import { toast } from "sonner";
   };
 
   return (
-    <Icon
-      icon="copy"
-      className="ml-3 inline cursor-pointer"
-      onClick={handleCopy}
-      data-testid="copy-button"
-    />
+    <Tooltip title="copy to clipboard">
+      <Icon
+        icon="copy"
+        className="ml-3 inline cursor-pointer"
+        onClick={handleCopy}
+        data-testid="copy-button"
+      />
+    </Tooltip>
   );
 }
 

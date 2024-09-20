@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/carousel";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Calendar } from "lucide-react";
+import { Tooltip } from "@/components/ui/tooltip";
 
 function ImageCarousel({ images }: { images: string[] }) {
   const [canScroll, setCanScroll] = useState({
@@ -113,16 +115,14 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          {!project.images.length ? null : (
-            <span
-              className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
-              onClick={toggleTechStack}
-              title={`${showTechStack ? "hide" : "show"} tech stack`}
-            >
-              {showTechStack ? "hide" : "show"}
-              <Icon icon="tool" size={15} />
-            </span>
-          )}
+          <Tooltip
+            className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
+            onClick={toggleTechStack}
+            title={`${showTechStack ? "hide" : "show"} tech stack`}
+          >
+            {showTechStack ? "hide" : "show"}
+            <Icon icon="tool" size={15} />
+          </Tooltip>
         </div>
 
         <p className="font-normal text-sm sm:text-base leading-6 min-h-[100px]">
@@ -131,7 +131,9 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="w-full flex items-center justify-between">
-        {project.isPrivateRepo ? null : (
+        {project.isPrivateRepo ? (
+          <span />
+        ) : (
           <Link
             href={project.gitHubRepo}
             target="_blank"
@@ -148,6 +150,16 @@ function ProjectCard({ project }: { project: Project }) {
             repo
           </Link>
         )}
+
+        {project.dateCreated ? (
+          <Tooltip
+            className="text-sm flex items-center justify-center gap-1 select-none"
+            title="date started"
+          >
+            <Calendar size={17} />
+            {new Date(project.dateCreated).toDateString()}
+          </Tooltip>
+        ) : null}
 
         {project.tabValues
           .filter((v) => v !== "favorites")

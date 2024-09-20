@@ -4,6 +4,8 @@ import type { SocialHandle } from "./api/types";
 import { SmallLineSvg } from "@/components/ui/svg";
 import Link from "next/link";
 import { CopyButton } from "./copy-button";
+import { Tooltip } from "@/components/ui/tooltip";
+import { MapPin } from "lucide-react";
 
 function SocialHandleCard({
   handle: { id, name, username, href },
@@ -11,15 +13,16 @@ function SocialHandleCard({
   handle: SocialHandle;
 }) {
   return (
-    <li className="flex flex-col">
+    <li className="flex flex-col" key={id}>
       <p className="font-semibold text-[1rem]">{name}</p>
       <Link
         href={href}
         target="_blank"
-        className="font-light text-nowrap text-app-blue-500 md:text-app-text-200 md:font-normal md:hover:text-app-blue-500"
-        title={"go to " + name + " - " + username}
+        className="font-light text-nowrap text-app-blue-500 md:text-app-text-200 md:font-normal md:hover:text-app-blue-500 text-app"
       >
-        @{username}
+        <Tooltip title={"Visit " + name.toLowerCase() + " - " + username.toLowerCase()}>
+          @{username}
+        </Tooltip>
       </Link>
     </li>
   );
@@ -81,6 +84,14 @@ export default async function Footer() {
                 </li>
               ))}
             </ul>
+
+            <hr className="border-app-blue-500 my-4" />
+
+            <span className="flex items-center justify-start gap-1 font-light">
+              <MapPin size={20} />
+
+              Earth! 🙂
+            </span>
           </div>
         </div>
       </div>
