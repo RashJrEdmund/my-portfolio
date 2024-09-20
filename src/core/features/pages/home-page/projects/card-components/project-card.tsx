@@ -71,8 +71,8 @@ function ProjectCard({ project }: { project: Project }) {
         {showTechStack ? (
           <div
             className={cn(
-              project.tabValues.includes("backend") ? "" : "absolute",
-              "z-[5] top-0 left-0 m-4 mt-5 flex flex-wrap items-start justify-start max-w-[300px] gap-2"
+              !project.images.length ? "" : "absolute",
+              "z-[5] top-0 left-0 m-4 mt-5 flex flex-wrap items-start justify-start max-w-[300px] gap-2 select-none"
             )}
           >
             {project.tags?.map(({ id, label, bgColor, textColor }) => (
@@ -113,7 +113,7 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          {project.tabValues.includes("backend") ? null : (
+          {!project.images.length ? null : (
             <span
               className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
               onClick={toggleTechStack}
@@ -130,23 +130,36 @@ function ProjectCard({ project }: { project: Project }) {
         </p>
       </div>
 
-      {project.isPrivateRepo ? null : (
-        <Link
-          href={project.gitHubRepo}
-          target="_blank"
-          className="w-fit flex items-center justify-center text-app-blue-500"
-          title="visit public repo"
-        >
-          <Image
-            src="/icons/github-icon.svg"
-            width={40}
-            height={40}
-            alt="git hub repo"
-            className="rounded-full"
-          />{" "}
-          repo
-        </Link>
-      )}
+      <div className="w-full flex items-center justify-between">
+        {project.isPrivateRepo ? null : (
+          <Link
+            href={project.gitHubRepo}
+            target="_blank"
+            className="w-fit flex items-center justify-center text-app-blue-500"
+            title="visit public repo"
+          >
+            <Image
+              src="/icons/github-icon.svg"
+              width={40}
+              height={40}
+              alt="git hub repo"
+              className="rounded-full"
+            />{" "}
+            repo
+          </Link>
+        )}
+
+        {project.tabValues
+          .filter((v) => v !== "favorites")
+          .map((v) => (
+            <span
+              key={v}
+              className="text-sm bg-app-dark-200 py-1 px-3 rounded-md select-none"
+            >
+              {v}
+            </span>
+          ))}
+      </div>
     </div>
   );
 }

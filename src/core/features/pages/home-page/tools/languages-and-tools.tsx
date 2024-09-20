@@ -7,9 +7,7 @@ function LanguagesAndTools() {
   return (
     <div id="tools" className="w-full flex items-center justify-center">
       <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-h flex flex-col items-center justify-center gap-8">
-        <SectionHeader>
-          Languages
-        </SectionHeader>
+        <SectionHeader>Languages</SectionHeader>
 
         <div className="w-full max-w-[850px] grid grid-auto-fill-150 md:grid-auto-fill-200 items-center justify-center gap-4 gap-y-6 xl:gap-y-14">
           <Suspense fallback={<ToolsShimmer />}>

@@ -19,7 +19,7 @@
     "test": "npx yarn jest --silent --coverage",
     "test:watch": "jest --watch --silent --coverage",
     "cy:open": "npx cypress open",
-    "format": "npx prettier --config .prettierrc.json -w ./cypress",
+    "format": "npx prettier --config .prettierrc.json -w ./src",
     "format:check": "npx prettier --config ./.prettierrc.json --check ./src",
     "prepare": "npx husky install",
     "pre-commit": "npx lint-staged"

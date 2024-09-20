@@ -24,10 +24,30 @@ interface Experience {
 
 // PROJECTS
 
-type ProjectLabels = "HTML" | "CSS" | "JavaScript" | "NextJs" | "VueJs"
-  | "Svelte" | "Firebase" | "PWA" | "TypeScript" | "Python" | "Java" | "SCSS"
-  | "TailwindCss" | "Openweather API" | "IPGeolocation" | "NestJs" | "Express"
-  | "Fastify" | "NodeJs" | "MongoDb" | "Jest" | "Cypress";
+type ProjectLabels =
+  | "HTML"
+  | "CSS"
+  | "JavaScript"
+  | "NextJs"
+  | "VueJs"
+  | "Svelte"
+  | "Firebase"
+  | "PWA"
+  | "TypeScript"
+  | "Python"
+  | "Java"
+  | "SCSS"
+  | "TailwindCss"
+  | "Openweather API"
+  | "IPGeolocation"
+  | "NestJs"
+  | "Express"
+  | "Fastify"
+  | "NodeJs"
+  | "MongoDb"
+  | "Jest"
+  | "Cypress"
+  | "NPM";
 
 interface ProjectTag {
   id: string;
@@ -39,7 +59,7 @@ interface ProjectTag {
 interface Project {
   id: string;
   name: string;
-  description: string;
+  description: React.ReactNode;
   url: string;
   images: string[];
   logo: string;
@@ -56,6 +76,7 @@ const ArrTabValues = [
   "backend",
   "frontend",
   "html&css",
+  "libraries",
   "all",
 ] as const;
 

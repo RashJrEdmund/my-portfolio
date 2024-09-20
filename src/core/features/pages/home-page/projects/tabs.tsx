@@ -12,17 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { type TabValues, ArrTabValues } from "../api/interface";
 
-interface TabProjectData {
-  tabs: {
-    text: string;
-    tabValue: TabValues;
-  }[];
-  tabContent: {
-    tabValue: TabValues;
-  }[];
-}
-
-const TabListData: TabProjectData["tabs"] = [
+const TabListData: { text: string; tabValue: TabValues }[] = [
   {
     text: "Favorites",
     tabValue: "favorites",
@@ -44,28 +34,11 @@ const TabListData: TabProjectData["tabs"] = [
     tabValue: "html&css",
   },
   {
+    text: "Libraries",
+    tabValue: "libraries",
+  },
+  {
     text: "All",
-    tabValue: "all",
-  },
-];
-
-const TabContentData: TabProjectData["tabContent"] = [
-  {
-    tabValue: "favorites",
-  },
-  {
-    tabValue: "fullstack",
-  },
-  {
-    tabValue: "frontend",
-  },
-  {
-    tabValue: "backend",
-  },
-  {
-    tabValue: "html&css",
-  },
-  {
     tabValue: "all",
   },
 ];
@@ -73,13 +46,11 @@ const TabContentData: TabProjectData["tabContent"] = [
 function ProjectTabs() {
   const searchParams = useSearchParams();
 
-  // const { isLoading, data: event } = useGetOneEvent(params.event_id);
-
   const defaultTab = useMemo(() => {
     // this is just for the persistence of each tab on refresh or page load. using search params to get current tab
-    const tab = searchParams.get("tab") || "favorites";
+    const tab = (searchParams.get("tab") || "favorites") as TabValues;
 
-    return ArrTabValues.includes(tab as TabValues) ? tab : "info"; // defaulting to info, the first tab.
+    return ArrTabValues.includes(tab as TabValues) ? tab : "favorites";
   }, [searchParams]);
 
   return (
@@ -89,26 +60,26 @@ function ProjectTabs() {
     >
       <TabsList className="flex flex-wrap w-fit h-fit items-center justify-center md:justify-start gap-4 bg-app-dark-500 p-2 text-app-text-200">
         {TabListData.map(({ text, tabValue }) => (
-          // <Link
-          //   key={tabValue}
-          //   href={`?tab=${tabValue}#projects`}
-          //   className="w-fit h-fit inline-block"
-          // >
-          <TabsTrigger
-            value={tabValue}
+          <Link
             key={tabValue}
-            className={cn(
-              "px-3 py-2 md:px-8 md:py-4 inline-block bg-app-dark-200"
-            )}
+            href={`?tab=${tabValue}#projects`}
+            className="w-fit h-fit inline-block"
           >
-            {text}
-          </TabsTrigger>
-          // </Link> }
+            <TabsTrigger
+              value={tabValue}
+              key={tabValue}
+              className={cn(
+                "px-3 py-2 md:px-8 md:py-4 inline-block bg-app-dark-200"
+              )}
+            >
+              {text}
+            </TabsTrigger>
+          </Link>
         ))}
       </TabsList>
 
       <div className="w-full min-h-[min(50vh,_600px)]">
-        {TabContentData.map(({ tabValue }) => (
+        {ArrTabValues.map((tabValue) => (
           <TabsContent
             value={tabValue}
             key={tabValue}

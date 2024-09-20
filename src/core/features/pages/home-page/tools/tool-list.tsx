@@ -34,7 +34,7 @@ function ToolComponent({
 
   const src =
     ServiceSVGObj[
-    ("serviceSvg" + adder) as unknown as keyof typeof ServiceSVGObj
+      ("serviceSvg" + adder) as unknown as keyof typeof ServiceSVGObj
     ];
 
   return (

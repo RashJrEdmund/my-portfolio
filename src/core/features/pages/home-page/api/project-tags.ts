@@ -158,14 +158,18 @@ const ProjectTagsData: ProjectTag[] = [
     bgColor: "#fff",
     textColor: "#000",
   },
+  {
+    id: "24",
+    label: "NPM",
+    bgColor: "orange",
+    textColor: "#fff",
+  },
 ];
 
 const getProjectTags = (labels: ProjectLabels[]): ProjectTag[] => {
   return labels.map((label) => {
     return ProjectTagsData.find((tag) => tag.label === label) as ProjectTag;
-  })
+  });
 };
 
-export {
-  getProjectTags,
-};
+export { getProjectTags };

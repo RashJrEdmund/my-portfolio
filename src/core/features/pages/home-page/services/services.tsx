@@ -26,9 +26,7 @@ function Services() {
         </div>
 
         <div className="w-full flex flex-col items-center justify-start gap-8">
-          <SectionHeader>
-            Skill Set
-          </SectionHeader>
+          <SectionHeader>Skill Set</SectionHeader>
 
           <div className="w-full flex flex-col items-center justify-center sm:grid sm:grid-auto-fill-350 2xl:flex 2xl:flex-row gap-4 gap-y-6 xl:gap-y-14">
             <Suspense fallback={<SkillShimmer />}>

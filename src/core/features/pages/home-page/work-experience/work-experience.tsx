@@ -24,9 +24,7 @@ function WorkExperience() {
       <div className="w-full max-w-app-dynamic-max-w mx-auto min-h-app-section-min-h pb-17">
         <SpaceShip />
 
-        <SectionHeader className="mb-11">
-          Work Experience
-        </SectionHeader>
+        <SectionHeader className="mb-11">Work Experience</SectionHeader>
 
         <div className="w-full flex flex-wrap gap-6 md:gap-8 items-start justify-center">
           <Suspense fallback={<ExperienceShimmer />}>

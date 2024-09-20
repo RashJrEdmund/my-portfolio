@@ -106,8 +106,8 @@ const ToolsAndLanguageData: Tool[] = [
     id: "5",
     img_url: "/lang-logos/rust-logo.jpeg",
     name: "Rust",
-  }
-]
+  },
+];
 
 // PROJECTS
 
@@ -147,7 +147,12 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-4-1717321825215.png?alt=media&token=2f80e067-13e8-4a0c-8b98-703c36417e44",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fkrash-weather-logo-1717321615378.png?alt=media&token=20bc286b-514b-42ff-97da-ddfec670ee6d",
-    tags: getProjectTags(["NextJs", "Openweather API", "IPGeolocation", "TypeScript"]),
+    tags: getProjectTags([
+      "NextJs",
+      "Openweather API",
+      "IPGeolocation",
+      "TypeScript",
+    ]),
     dateCreated: "",
     gitHubRepo: "https://github.com/RashJrEdmund/krash-weather-app",
     isPrivateRepo: false,
@@ -165,7 +170,13 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-footer-1717246640388.png?alt=media&token=329ed02e-0429-474e-82ed-04b330b9daab",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Flogo-1717241835706.png?alt=media&token=fb9d6405-9dfa-417f-976c-aa8038a123c1",
-    tags: getProjectTags(["NextJs", /* "NestJs", "MongoDb", */ "PWA", "Jest", "Cypress", "TypeScript"]),
+    tags: getProjectTags([
+      "NextJs",
+      /* "NestJs", "MongoDb", */ "PWA",
+      "Jest",
+      "Cypress",
+      "TypeScript",
+    ]),
     dateCreated: "",
     gitHubRepo: "https://github.com/rashjredmund/my-portfolio",
     isPrivateRepo: true,
@@ -173,7 +184,8 @@ const ProjectData: Project[] = [
   {
     id: "4",
     name: "R - Devs todo app",
-    description: "A full stack todo application built by I and my team in preparation of a regional hackathon. The purpose of this project was to help everyone understand how to work with the rest of the team. Both the front-end and back-end of this mono-repo were uploaded and deployed on vercel. It from here I learned to use the vercel CLI in for deployment",
+    description:
+      "A full stack todo application built by I and my team in preparation of a regional hackathon. The purpose of this project was to help everyone understand how to work with the rest of the team. Both the front-end and back-end of this mono-repo were uploaded and deployed on vercel. It from here I learned to use the vercel CLI in for deployment",
     url: "https://r-dev-to-do.vercel.app/",
     tabValues: ["fullstack"],
     images: [
@@ -196,7 +208,7 @@ const ProjectData: Project[] = [
     description:
       "A url shortener I built with svelteKit (TS), Tailwind, SASS for the table, Fastify for auth, Express for redirects & shortening, and MongoDb. I deployed the API's on render.com but render shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 As of now, I have a cron job setup that hits the API every 12 mins, in hopes to keep it alive.",
     url: "https://mini-link.vercel.app/",
-    tabValues: ["fullstack"],
+    tabValues: ["favorites", "fullstack"],
     images: [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-landing-1717417908077.png?alt=media&token=5fc4abab-e6f2-435c-96be-df4154e36f0b",
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-home-1717417904532.png?alt=media&token=ce8b1b19-8efe-483a-85b2-e3b9d825d4ab",
@@ -204,8 +216,16 @@ const ProjectData: Project[] = [
       "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-login-1717417911665.png?alt=media&token=743815fc-0067-4bb5-ac5b-f1f377635de4",
     ],
     logo: "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fmini-link-logo-1717417885799.png?alt=media&token=b7361c2f-58fb-4444-b05a-e767d0418872",
-    tags: getProjectTags(["Svelte", "SCSS", "TailwindCss", "Fastify", "Express", "MongoDb", "TypeScript"]),
-    dateCreated: "",
+    tags: getProjectTags([
+      "Svelte",
+      "SCSS",
+      "TailwindCss",
+      "Fastify",
+      "Express",
+      "MongoDb",
+      "TypeScript",
+    ]),
+    dateCreated: "Mon Sep 4 2023",
     gitHubRepo: "https://github.com/RashJrEdmund/mini_link",
     isPrivateRepo: false,
   },
@@ -238,10 +258,27 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "7",
+    id: "8",
+    name: "@orashus/client-storage",
+    description: `A package I built as browser storage API with a wrapper. It takes away all the manual stringifying and parsing. 
+    It introduces a more concise syntax with intuitive methods like .save() and .get().
+    I've implemented generics and function overloads, to narrow down the type of data you're working with or getting.
+    It has a fallback option incase of missing data and some amount of error handling under the hood with clear, helpful error messages.
+    And finally server-side detection for frame works like NextJs`,
+    url: "https://api-re-starter.onrender.com/",
+    tabValues: ["favorites", "libraries"],
+    images: [],
+    logo: "https://github.com/orashus/client-storage/blob/main/assets/client-storage%20logo.png?raw=true",
+    tags: getProjectTags(["TypeScript", "NPM"]),
+    dateCreated: "Sep 19 2024",
+    gitHubRepo: "https://github.com/orashus/client-storage",
+    isPrivateRepo: false,
+  },
+  {
+    id: "9",
     name: "Casino",
     description:
-      "A casino site I built as a take home assessment for a company I applied for, no feed back yet 🥲, but I found it worthy to be here because of the time and effort I put in to make this right. It is here I started writing tests,",
+      "A casino site I built as a take home assessment for a company I applied for, didn't get any feed back. I found it worthy to be here because of the time and effort I put in to make this right. It is here I learned to and started writing tests.",
     url: "https://casino-brand.vercel.app/",
     tabValues: ["frontend"],
     images: [
@@ -256,7 +293,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "8",
+    id: "10",
     name: "My Vue app collection",
     description:
       "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
@@ -274,7 +311,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "9",
+    id: "11",
     name: "My first portfolio",
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
@@ -316,8 +353,7 @@ const CertificateData = [
     id: "3",
     title: "ALX AICE (AI Career Essentials)",
     url: "alx-aice-completion-badge-v2.gif",
-    previewImg:
-      "/alx-aice-completion-badge-v2.gif",
+    previewImg: "/alx-aice-completion-badge-v2.gif",
     dateArchived: "8/18/2024",
   },
 ];
@@ -327,5 +363,5 @@ export {
   ExperienceData,
   ToolsAndLanguageData,
   ProjectData,
-  CertificateData
+  CertificateData,
 };

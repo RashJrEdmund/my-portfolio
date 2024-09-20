@@ -25,10 +25,12 @@ function SpaceShip({
 
   const startEngine = () => {
     setSpiSrc("/space-craft.svg");
+    setEngineStarted(true);
   };
 
   const StopEngine = () => {
     setSpiSrc("/space-craft-idling.svg");
+    setEngineStarted(false);
   };
 
   useEffect(() => {
@@ -45,7 +47,7 @@ function SpaceShip({
   return (
     <motion.div
       className={cn(
-        "z-[8] w-fit h-fit rounded-2xl mx-auto bg-transparent flex items-center justify-center text-center",
+        "relative z-[8] w-[200px] h-[220px] rounded-2xl mx-auto bg-transparent flex items-center justify-center text-center",
         className
       )}
       whileHover={{ scale: 1.2 }}
@@ -70,10 +72,10 @@ function SpaceShip({
       <DynamicText
         writerOptions={{
           words: [
-            "let's goOO! 😅",
-            "sky's not even a limit",
-            "if we work to gether",
-            "so let's work",
+            "Hi there!",
+            "We could do great things together",
+            "Only if we worked as a team",
+            "So let's work",
           ],
           loop: 2,
           cursorStyle: "_",
@@ -86,7 +88,10 @@ function SpaceShip({
         alt="space craft. sky's not even the limit, if we work together"
         height={100}
         width={100}
-        className={cn("w-[200px]", imgSx)}
+        className={cn(
+          "absolute z-30 top-0 left-[50%] translate-x-[-50%] w-[200px]",
+          imgSx
+        )}
         draggable={false}
         title={
           engineStarted ? "Blur out to stop engine" : "Click to start engine"
