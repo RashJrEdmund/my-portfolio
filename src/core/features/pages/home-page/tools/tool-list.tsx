@@ -44,7 +44,7 @@ function ToolComponent({
         alt="service icon"
         width={100}
         height={100}
-        className="size-[100px]"
+        className="size-[90px]"
         draggable={false}
         data-test-src={src}
       />
