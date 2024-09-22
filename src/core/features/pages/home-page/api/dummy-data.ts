@@ -265,7 +265,7 @@ const ProjectData: Project[] = [
     I've implemented generics and function overloads, to narrow down the type of data you're working with or getting.
     It has a fallback option incase of missing data and some amount of error handling under the hood with clear, helpful error messages.
     And finally server-side detection for frame works like NextJs`,
-    url: "https://api-re-starter.onrender.com/",
+    url: "https://www.npmjs.com/package/@orashus/client-storage",
     tabValues: ["favorites", "libraries"],
     images: [],
     logo: "https://github.com/orashus/client-storage/blob/main/assets/client-storage%20logo.png?raw=true",
