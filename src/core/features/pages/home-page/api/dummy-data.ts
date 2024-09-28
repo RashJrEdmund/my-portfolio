@@ -245,6 +245,21 @@ const ProjectData: Project[] = [
   },
   {
     id: "7",
+    name: "@orashus/http-client",
+    description: `In many of my projects, I find myself writing the same boilerplate code to wrap around fetch for simple API calls. I know I could use popular
+      libraries like axios, but they often come with features and overhead You and I don't need for most applications. If all you need are the fundamental HTTP
+      verbs for API communication, then my package is a lightweight alternative with the functionality you need.`,
+    url: "https://www.npmjs.com/package/@orashus/http-client",
+    tabValues: ["favorites", "libraries"],
+    images: [],
+    logo: "https://github.com/orashus/http-client/blob/main/assets/http-client-logo.png?raw=true",
+    tags: getProjectTags(["TypeScript", "NPM"]),
+    dateCreated: "Sat Sep 28 2024",
+    gitHubRepo: "https://github.com/orashus/http-client",
+    isPrivateRepo: false,
+  },
+  {
+    id: "8",
     name: "API re-starter (Cron Job)",
     description:
       "I built this to resolve the issue with Mini link APIs and other backend services I deployed on render. Since Render shuts down a free tier service after 15 minutes of idleness, I built this cron-job to hit all the API's I deployed on Render free tier after every 12mins. This makes sure my backend services on render are always live and active 😇",
@@ -258,7 +273,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "8",
+    id: "9",
     name: "@orashus/client-storage",
     description: `A package I built as browser storage API with a wrapper. It takes away all the manual stringifying and parsing. 
     It introduces a more concise syntax with intuitive methods like .save() and .get().
@@ -275,7 +290,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "9",
+    id: "10",
     name: "Casino",
     description:
       "A casino site I built as a take home assessment for a company I applied for, didn't get any feed back. I found it worthy to be here because of the time and effort I put in to make this right. It is here I learned to and started writing tests.",
@@ -293,7 +308,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "10",
+    id: "11",
     name: "My Vue app collection",
     description:
       "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
@@ -311,7 +326,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "11",
+    id: "12",
     name: "My first portfolio",
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
