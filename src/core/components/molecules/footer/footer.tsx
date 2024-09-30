@@ -90,7 +90,8 @@ export default async function Footer() {
             <span className="flex items-center justify-start gap-1 font-light">
               <MapPin size={20} />
 
-              Earth! 🙂
+              {/* Earth! 🙂 */}
+              Yaoundé, Centre, Cameroon
             </span>
           </div>
         </div>

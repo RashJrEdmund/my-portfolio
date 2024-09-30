@@ -131,7 +131,7 @@ const ProjectData: Project[] = [
     tags: getProjectTags(["NextJs", "Firebase", "PWA", "TypeScript"]),
     dateCreated: "Tue Jan 2 2024",
     gitHubRepo: "https://github.com/rashjredmund/r-cloud",
-    isPrivateRepo: true,
+    isPrivateRepo: false,
   },
   {
     id: "2",
@@ -179,7 +179,7 @@ const ProjectData: Project[] = [
     ]),
     dateCreated: "Sun May 26 2024",
     gitHubRepo: "https://github.com/rashjredmund/my-portfolio",
-    isPrivateRepo: true,
+    isPrivateRepo: false,
   },
   {
     id: "4",
