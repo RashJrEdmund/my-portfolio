@@ -20,7 +20,9 @@ function SocialHandleCard({
         target="_blank"
         className="font-light text-nowrap text-app-blue-500 md:text-app-text-200 md:font-normal md:hover:text-app-blue-500 text-app"
       >
-        <Tooltip title={"Visit " + name.toLowerCase() + " - " + username.toLowerCase()}>
+        <Tooltip
+          title={"Visit " + name.toLowerCase() + " - " + username.toLowerCase()}
+        >
           @{username}
         </Tooltip>
       </Link>
@@ -89,7 +91,6 @@ export default async function Footer() {
 
             <span className="flex items-center justify-start gap-1 font-light">
               <MapPin size={20} />
-
               {/* Earth! 🙂 */}
               Yaoundé, Centre, Cameroon
             </span>

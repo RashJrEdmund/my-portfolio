@@ -115,18 +115,16 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          {
-            project.images.length ? (
-              <Tooltip
-                className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
-                onClick={toggleTechStack}
-                title={`${showTechStack ? "hide" : "show"} tech stack`}
-              >
-                {showTechStack ? "hide" : "show"}
-                <Icon icon="tool" size={15} />
-              </Tooltip>
-            ) : null
-          }
+          {project.images.length ? (
+            <Tooltip
+              className="font-light flex flex-nowrap items-center justify-center gap-1 cursor-pointer"
+              onClick={toggleTechStack}
+              title={`${showTechStack ? "hide" : "show"} tech stack`}
+            >
+              {showTechStack ? "hide" : "show"}
+              <Icon icon="tool" size={15} />
+            </Tooltip>
+          ) : null}
         </div>
 
         <p className="font-normal text-sm sm:text-base leading-6 min-h-[100px]">

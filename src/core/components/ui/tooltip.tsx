@@ -35,14 +35,22 @@ interface ToolTipProps {
   onClick?: () => void;
 }
 
-function Tooltip({ title, children, className = "", titleSx = "", ...restProps }: ToolTipProps) {
+function Tooltip({
+  title,
+  children,
+  className = "",
+  titleSx = "",
+  ...restProps
+}: ToolTipProps) {
   return (
     <TooltipProvider>
       <_Tooltip>
         <TooltipTrigger className={className} {...restProps}>
           {children}
         </TooltipTrigger>
-        <TooltipContent className={cn("z-30 border-none bg-app-dark-200 text-white", titleSx)}>
+        <TooltipContent
+          className={cn("z-30 border-none bg-app-dark-200 text-white", titleSx)}
+        >
           {title}
         </TooltipContent>
       </_Tooltip>

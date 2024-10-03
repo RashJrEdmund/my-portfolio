@@ -16,19 +16,17 @@ function LanguagesAndTools() {
           </Suspense>
         </div>
 
-        {
-          [
-            "next,react,svelte,vue,tailwind,sass,emotion",
-            "nodejs,express,nestjs,flask,prisma,firebase,git,github,mongodb,postgres,mysql,redux,docker,kafka",
-            "jest,cypress,md",
-          ].map(iconSet => (
-            <img
-              key={iconSet}
-              src={`${SkillIconUrl}?i=${iconSet}&perline=10`}
-              alt="my skills"
-            />
-          ))
-        }
+        {[
+          "next,react,svelte,vue,tailwind,sass,emotion",
+          "nodejs,express,nestjs,flask,prisma,firebase,git,github,mongodb,postgres,mysql,redux,docker,kafka",
+          "jest,cypress,md",
+        ].map((iconSet) => (
+          <img
+            key={iconSet}
+            src={`${SkillIconUrl}?i=${iconSet}&perline=10`}
+            alt="my skills"
+          />
+        ))}
       </div>
     </div>
   );
