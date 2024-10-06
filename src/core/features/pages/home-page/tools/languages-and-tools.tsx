@@ -19,7 +19,7 @@ function LanguagesAndTools() {
         {[
           "next,react,svelte,vue,tailwind,sass,emotion",
           "nodejs,express,nestjs,flask,prisma,firebase,git,github,mongodb,postgres,mysql,redux,docker,kafka",
-          "jest,cypress,md",
+          "jest,cypress,redis,grafana,md",
         ].map((iconSet) => (
           <img
             key={iconSet}
