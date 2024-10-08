@@ -52,7 +52,7 @@ function ToolComponent({
       <h4 className="font-semibold text-[1.2rem]">{name}</h4>
     </div>
   );
-}
+};
 
 async function ToolList() {
   const tools = await getToolAndLanguages();
