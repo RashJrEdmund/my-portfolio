@@ -17,7 +17,7 @@ function LanguagesAndTools() {
         </div>
 
         {[
-          "next,react,svelte,vue,tailwind,sass,emotion",
+          "next,react,remix,svelte,vue,tailwind,sass,emotion",
           "nodejs,express,nestjs,flask,prisma,firebase,git,github,mongodb,postgres,mysql,redux,docker,kafka",
           "jest,cypress,redis,grafana,md",
         ].map((iconSet) => (
