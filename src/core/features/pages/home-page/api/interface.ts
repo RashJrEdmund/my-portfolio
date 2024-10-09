@@ -78,6 +78,7 @@ const ArrTabValues = [
   "html&css",
   "libraries",
   "all",
+  "incomplete",
 ] as const;
 
 type TabValues = (typeof ArrTabValues)[number];

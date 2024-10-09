@@ -38,6 +38,10 @@ const TabListData: { text: string; tabValue: TabValues }[] = [
     tabValue: "libraries",
   },
   {
+    text: "Incomplete",
+    tabValue: "incomplete",
+  },
+  {
     text: "All",
     tabValue: "all",
   },
