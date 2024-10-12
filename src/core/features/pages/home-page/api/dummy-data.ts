@@ -113,7 +113,7 @@ const ToolsAndLanguageData: Tool[] = [
 
 const ProjectData: Project[] = [
   {
-    id: "1",
+    id: "b48b8597-92f6-4d79-b397-c3cf39843fd2",
     name: "R - Cloud",
     description:
       "A cloud storage PWA (Progressive Web App), designed with figma and built for storing, sharing, and managing files. I use it to save some of my files, and used it on this portfolio to save some of these assets. It can be monetized, and has other features I intend to add to it, like google analytics, and other things we could talk about during our interview 🙂",
@@ -134,7 +134,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "2",
+    id: "2144b520-da83-4f52-8424-524f9d0dc77d",
     name: "Krash - Weather",
     description:
       "A simple yet beautiful weather APP, It is one among the many projects I built when I started out with NextJs, It has automatic geo-weather detection, (making use of Ipgeolocation), search features, and a 5 day weather forecast with each day having 8 forecasts with a 3 hour spacing",
@@ -158,7 +158,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "3",
+    id: "304f5fdf-9cfb-47fd-a58a-b0c56941ce3b",
     name: "Portfolio",
     description:
       'My portfolio and blog site, designed with figma, and built to show case my abilities, so I can get hired and get paid to work 🙂. Don\'t forget to play with the mini space-ship parked right above the "Experience section"',
@@ -182,7 +182,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "4",
+    id: "0fc72687-d26d-4565-9946-b03dfe899e5b",
     name: "R - Devs todo app",
     description:
       "A full stack todo application built by I and my team in preparation of a regional hackathon. The purpose of this project was to help everyone understand how to work with the rest of the team. Both the front-end and back-end of this mono-repo were uploaded and deployed on vercel. It from here I learned to use the vercel CLI in for deployment",
@@ -203,7 +203,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "5",
+    id: "7227abbb-27e8-412f-b6df-c0eee62327c3",
     name: "Mini - Link",
     description:
       "A url shortener I built with svelteKit (TS), Tailwind, SASS for the table, Fastify for auth, Express for redirects & shortening, and MongoDb. I deployed the API's on render.com but render shuts down my free backend services after 15 mins of idling, causing my app to break.🤕 As of now, I have a cron job setup that hits the API every 12 mins, in hopes to keep it alive.",
@@ -230,7 +230,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "6",
+    id: "034f171d-4fd4-49c2-b943-0e635166027b",
     name: "Mini - Link (Auth)",
     description:
       "The Auth back end API for mini - link, built with Fastify as a separate services from that built with express, I made this separation to get some level of experience in building micro-services",
@@ -244,7 +244,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "7",
+    id: "ed44a065-7fc4-4774-9855-ed4979f787dc",
     name: "@orashus/http-client",
     description: `In many of my projects, I find myself writing the same boilerplate code to wrap around fetch for simple API calls. I know I could use popular
       libraries like axios, but they often come with features and overhead You and I don't need for most applications. If all you need are the fundamental HTTP
@@ -259,7 +259,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "8",
+    id: "8484a915-bf53-4a28-b832-075737a29814",
     name: "API re-starter (Cron Job)",
     description:
       "I built this to resolve the issue with Mini link APIs and other backend services I deployed on render. Since Render shuts down a free tier service after 15 minutes of idleness, I built this cron-job to hit all the API's I deployed on Render free tier after every 12mins. This makes sure my backend services on render are always live and active 😇",
@@ -273,7 +273,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "9",
+    id: "d426d684-8c9e-4745-88ec-0731aff23a17",
     name: "@orashus/client-storage",
     description: `A package I built as browser storage API with a wrapper. It takes away all the manual stringifying and parsing. 
     It introduces a more concise syntax with intuitive methods like .save() and .get().
@@ -290,7 +290,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "10",
+    id: "f9411b4b-de73-4628-8e79-35d693a22acc",
     name: "Casino",
     description:
       "A casino site I built as a take home assessment for a company I applied for, didn't get any feed back. I found it worthy to be here because of the time and effort I put in to make this right. It is here I learned to and started writing tests.",
@@ -308,7 +308,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "11",
+    id: "7ac10628-fbda-4f19-b77f-b24fd394557e",
     name: "My Vue app collection",
     description:
       "I compiled a few mini projects I built back when I was learning to use VueJs, It has a nav bar with routes to most of the presentable things I built with VueJs",
@@ -326,7 +326,7 @@ const ProjectData: Project[] = [
     isPrivateRepo: false,
   },
   {
-    id: "12",
+    id: "8427c3de-25c0-4a3d-8ed3-51a508dc8c9d",
     name: "My first portfolio",
     description:
       "The first portfolio site, I built, containing every other HTML5 & CSS3 project. I remember this as one of the best things I built back when I was still struggling to understand DOM manipulation in JS. It is here not for it's beauty or technicality (and no where near optimized 🫠), but for the story behind it 🫶🏾 😊",
@@ -341,6 +341,24 @@ const ProjectData: Project[] = [
     tags: getProjectTags(["HTML", "CSS", "JavaScript"]),
     dateCreated: "Wed Oct 26 2022",
     gitHubRepo: "https://github.com/RashJrEdmund/Portfolio",
+    isPrivateRepo: false,
+  },
+  {
+    id: "92cee4b6-7bc7-4286-bc38-166931cfc6c8",
+    name: "Talent Tool Kit",
+    description:
+      "A Team project from Rebase - Devs; The platform is meant for connecting Cameroonian talent with Employers both in and out of the country",
+    url: "https://talenttoolkit.vercel.app/",
+    tabValues: ["incomplete"],
+    images: [
+      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-banner-1717413269428.png?alt=media&token=2a441828-2f1d-4e8c-9fe2-de918bbf3bf7",
+      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-projects-1717413254475.png?alt=media&token=53171725-2f0a-4097-bbe0-b98f73d42a75",
+      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-footer-1717413247454.png?alt=media&token=b62024e3-735f-447b-a589-8635115a6ffc",
+    ],
+    logo: "https://talenttoolkit.vercel.app/favicon.ico",
+    tags: getProjectTags(["NextJs", "TailwindCss"]),
+    dateCreated: "Jul 2 2024",
+    gitHubRepo: "https://github.com/Gmarvis/talent_toolkit_fr",
     isPrivateRepo: false,
   },
 ];
