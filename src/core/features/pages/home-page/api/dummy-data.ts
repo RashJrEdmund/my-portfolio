@@ -347,7 +347,7 @@ const ProjectData: Project[] = [
     id: "92cee4b6-7bc7-4286-bc38-166931cfc6c8",
     name: "Talent Tool Kit",
     description:
-      "A Team project from Rebase - Devs; The platform is meant for connecting Cameroonian talent with Employers both in and out of the country",
+    "A Team project, The platform is meant for connecting Cameroonian talent (In different sectors and not just tech) with Employers both in and out of the country. This is a way to make Cameroonian talent break the gap and show how valuable some of our developers are",
     url: "https://talenttoolkit.vercel.app/",
     tabValues: ["incomplete"],
     images: [
