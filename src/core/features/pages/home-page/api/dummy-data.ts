@@ -30,7 +30,7 @@ const SkillData: Skill[] = [
 
 const ExperienceData: Experience[] = [
   {
-    id: "1",
+    id: "aftawallet",
     organization: "AftaWallet",
     orgDescription:
       "A fin-tech start-up based in Kigali Rwanda, with a vision to make money transfer easy across a number of African countries",
@@ -46,7 +46,7 @@ const ExperienceData: Experience[] = [
     endDate: "2024-05-30T12:43:11.700Z",
   },
   {
-    id: "2",
+    id: "azen-enterprise",
     organization: "Azen Enterprise",
     orgLink: "https://www.linkedin.com/company/azen-enterprise/",
     orgDescription:
@@ -62,7 +62,7 @@ const ExperienceData: Experience[] = [
     endDate: "2024-05-30T12:43:11.700Z",
   },
   {
-    id: "3",
+    id: "rebase-academy",
     organization: "Rebase Academy",
     orgLink: "https://www.linkedin.com/in/rebase-academy-/",
     orgDescription:
@@ -83,27 +83,27 @@ const ExperienceData: Experience[] = [
 
 const ToolsAndLanguageData: Tool[] = [
   {
-    id: "1",
+    id: "typescript",
     img_url: "/lang-logos/ts-logo.png",
     name: "TypeScript",
   },
   {
-    id: "2",
+    id: "javascript",
     img_url: "/lang-logos/js-logo.png",
     name: "JavaScript",
   },
   {
-    id: "3",
+    id: "python",
     img_url: "/lang-logos/python-logo.jpeg",
     name: "Python",
   },
   {
-    id: "4",
+    id: "java",
     img_url: "/lang-logos/java-logo.png",
     name: "Java",
   },
   {
-    id: "5",
+    id: "rust",
     img_url: "/lang-logos/rust-logo.jpeg",
     name: "Rust",
   },
@@ -350,11 +350,7 @@ const ProjectData: Project[] = [
     "A Team project, The platform is meant for connecting Cameroonian talent (In different sectors and not just tech) with Employers both in and out of the country. This is a way to make Cameroonian talent break the gap and show how valuable some of our developers are",
     url: "https://talenttoolkit.vercel.app/",
     tabValues: ["incomplete"],
-    images: [
-      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fportfolio-1-banner-1717413269428.png?alt=media&token=2a441828-2f1d-4e8c-9fe2-de918bbf3bf7",
-      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-projects-1717413254475.png?alt=media&token=53171725-2f0a-4097-bbe0-b98f73d42a75",
-      // "https://firebasestorage.googleapis.com/v0/b/r-cloud-b40e6.appspot.com/o/users%2Forashusedmund%40gmail.com%2Fr-drive%2Fporfolio-1-footer-1717413247454.png?alt=media&token=b62024e3-735f-447b-a589-8635115a6ffc",
-    ],
+    images: [],
     logo: "https://talenttoolkit.vercel.app/favicon.ico",
     tags: getProjectTags(["NextJs", "TailwindCss"]),
     dateCreated: "Jul 2 2024",
@@ -367,7 +363,7 @@ const ProjectData: Project[] = [
 
 const CertificateData = [
   {
-    id: "1",
+    id: "hackerrank-basic-developer",
     title: "HackerRank JavaScript Developer (Basic)",
     url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
     previewImg:
@@ -375,7 +371,7 @@ const CertificateData = [
     dateArchived: "6/17/2023",
   },
   {
-    id: "2",
+    id: "hackerrank-intermediate-developer",
     title: "HackerRank JavaScript Developer (Intermediate)",
     url: "https://www.hackerrank.com/certificates/ab41a92a50fd",
     previewImg:
@@ -383,7 +379,7 @@ const CertificateData = [
     dateArchived: "10/6/2023",
   },
   {
-    id: "3",
+    id: "alx-ai-career-essentials",
     title: "ALX AICE (AI Career Essentials)",
     url: "alx-aice-completion-badge-v2.gif",
     previewImg: "/alx-aice-completion-badge-v2.gif",
